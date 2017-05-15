@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <?php include('../common/Bstyle.html')?>
+</head>
+<body>
+<!-- 主题结构-->
+<div class="layout">
+    <!--头部部分-->
+    <?php include('../common/Bheader.html')?>
+
+    <!--搜索栏-->
+    <?php include('../common/Bsearch.html')?>
+
+    <div class="login_box">
+        <form action="">
+            <input type="text"/>
+            <input type="password"/>
+            <input type="button" value="登录"/>
+            <div class="checked">
+                <input type="checkbox" checked/>
+                <span>一个月内自动登录</span>
+            </div>
+        </form>
+    </div>
+    <!--空白-->
+    <div class="blank">
+        <div class="blank_ogin">请输入账号和密码</div>
+    </div>
+    <p>忘记密码:请电脑登录www.manmanbuy.com找回</p>
+
+    <!-- 底部-->
+    <?php include('../common/foot.html')?>
+
+
+    <!-- 底下的广告栏-->
+    <div class="banner_down">
+        <a class="close_box">
+            <i class="iconfont icon-guanbi"></i>
+        </a>
+        <div class="baner">
+            <span class="manlogo"></span>
+            <h3>慢慢买</h3>
+            <p>全网比价，历史价格查询</p>
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="downopen">立即打开</a>
+        </div>
+
+    </div>
+
+</div>
+
+<?php include('../common/Bscript.html')?>
+</body>
+</html>

@@ -1,0 +1,149 @@
+//字体图标
+//第一步：拷贝项目下面生成的font-face
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../lib/font_960y6yj4lwyiudi/iconfont.eot');
+  src: url('../../lib/font_960y6yj4lwyiudi/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../../lib/font_960y6yj4lwyiudi/iconfont.woff') format('woff'),
+  url('../../lib/font_960y6yj4lwyiudi/iconfont.ttf') format('truetype'),
+  url('../../lib/font_960y6yj4lwyiudi/iconfont.svg#iconfont') format('svg');
+}
+//第二步：定义使用iconfont的样式
+//第三步：挑选相应图标并获取字体编码，应用于页面
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@color:#f4483e;
+@color1: #efefef;
+@color2: #eeeeee;
+li{
+  list-style: none;
+}
+//<!--顶部header-->
+.couponindex-header{
+  height: 70px;
+  width: 100%;
+  //display: block;
+  position: relative;
+  background: @color;
+  margin-bottom: 20px;
+  .couponindex-header-back{
+    float: left;
+    width: 50px;
+    text-align: center;
+    //position: relative;
+    padding-left: 10px;
+    .iconfont{
+      color: #fff;
+      width: 100%;
+      line-height: 70px;
+      left: 10px;
+      background: no-repeat center ;
+      position: relative;
+      font-size: 40px;
+      ::before {
+        content: "";
+        //color: yellow;
+        font-size: 17px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family:"iconfont" !important;
+      }
+    }
+  }
+  h1{
+    width: 100px;
+    //float: left;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    //margin-top: 30px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 700;
+    color:#fff
+  }
+  .couponindex-header-downLoad{
+    float: right;
+    width: 50px;
+    text-align: center;
+      //position: relative;
+    padding-left: 10px;
+    .couponindex-header_app{
+      display: block;
+      top: -68px;
+      right: 20px;
+      width: 100%;
+      height: 70px;
+      line-height: 70px;
+      //margin-right: 50px;
+      background: url("../../images/header_app.png") no-repeat center ;
+      position: relative;
+      background-size: 40px;
+    }
+  }
+}
+
+//主体肯德基部分
+.couponindex-main{
+  text-align: left;
+  width: 100%;
+    .couponindex-model{
+      margin:10px auto;
+      .couponindex-box{
+        padding-bottom: 6px;
+        margin-bottom: 10px;
+        li{
+          height: 100px;
+          border: 1px solid @color2;
+          overflow: hidden;
+          display: block;
+          margin-left: 15px;
+          text-align: center;
+          a{
+            display: block;
+            height: 100%;
+            text-decoration:none;
+            margin-bottom: 10px;
+            img{
+              margin-top: 5px;
+              max-height: 50px;
+              width: 50px;
+            }
+          }
+        }
+      }
+    }
+}
+//其他
+.couponindex-msg{
+  display: block;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 15px;
+  margin-top: 20px;
+  background: #f5f5f5;
+  padding-left: 8px;
+  border:1px solid #c4c4c4;
+  color: #000000;
+}
+//右侧固定图片
+.couponindex-right-app{
+      display: block;
+      width: 60px;
+      height: 68px;
+      background: url("../../images/coupon/right-app.png") no-repeat;
+      //position: fixed;
+      background-size: 40px;
+      padding-right: 20px;
+      vertical-align:middle;
+    }
+
+

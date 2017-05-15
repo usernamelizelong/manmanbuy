@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买-优惠券</title>
+    <!--第三方的样式-->
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <!--引用公共的样式-->
+    <link rel="stylesheet" href="../../css/common/base.css">
+    <!--引用自己的样式-->
+    <link rel="stylesheet" href="../../css/coupon/coupon.css">
+</head>
+<body>
+    <!--顶部header-->
+    <div id="couponindex-header" class="couponindex-header clearfix" >
+        <div class="couponindex-header-back">
+            <a href="#" class="iconfont">&#xf0343;</a>
+        </div>
+        <h1>优惠卷</h1>
+        <div class="couponindex-header-downLoad">
+            <a href="#" class="couponindex-header_app"></a>
+        </div>
+    </div>
+    <!--主体-->
+    <div class="couponindex-main">
+        <div class="couponindex-model">
+            <div class="couponindex-box clearfix">
+                <ul class="couponindex-link">
+                    <!--图片渲染模块-->
+                    <!--<li id="couponindex-link" class="clearfix" style="width: 353px">-->
+                        <!--<a href="#">-->
+                            <!--<img src="../../images/coupon/coupon.jpg" alt="肯德基优惠券">-->
+                            <!--<br>-->
+                            <!--肯德基-->
+                        <!--</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--其他-->
+    <div class="couponindex-msg">
+        <a href="#">首页</a> > <a href="#">优惠卷</a>
+    </div>
+    <!--右侧固定图片-->
+    <div style="position:fixed;right:0;bottom:30px;z-index:999">
+        <a href="#" class="couponindex-right-app"></a>
+    </div>
+    <!--底部-->
+    <div class="couponindex-footer"></div>
+
+    <!--图片渲染模块-->
+    <script id="couponindex-tpl" type="text/html">
+    {{each result }}
+            <li class="clearfix f_left " style="margin-right:10px 50px; padding:0px 40px">
+                <a href="./couponproduct.html?id={{ $value.couponId }}" class="">
+                <img src={{ $value.couponImg }} alt="">
+                <br>
+                {{ $value.couponTitle }}
+                </a>
+            </li>
+    {{ /each }}
+</script>
+</body>
+<!--<script id="coupon-title-tpl" type="text/html">-->
+    <!--{{each result}}-->
+    <!--<div id="coupon-title" >-->
+        <!--<ul>-->
+            <!--<li>-->
+                <!--&lt;!&ndash;<a href="quan.aspx?id={{$value.couponLink}}">&ndash;&gt;-->
+                <!--<a href="./coupon_list.html?id={{$value.couponId}}">-->
+                    <!--<img src="{{$value.couponImg}}" alt="">-->
+
+                    <!--<p>{{$value.couponTitle}}</p>-->
+                <!--</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--{{/each}}-->
+<!--</script>-->
+
+
+
+
+    <!--引用jq-->
+    <script src="../../lib/jquery/jquery.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <!--引用template-->
+    <script src="../../lib/artTemplate-3.0.1/template.js"></script>
+    <!--引用自己的js-->
+<!--<script src="../../js/common/util.js"></script>-->
+    <script src="../../js/coupon/coupon.js"></script>
+</html>

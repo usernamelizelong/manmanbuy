@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商品详情功能界面</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <?php include('../common/Bstyle.html')?>
+    <link rel="stylesheet" href="../../css/product/product-detail.css"/>
+</head>
+<body>
+<div class="xq-layout">
+    <?php include('../common/Bheader.html')?>
+    <?php include('../common/Bsearch.html')?>
+    <div id="fh-tpl">
+        <!--返回的上级的坑-->
+    </div>
+    <div class="spxq" id="xiangqing">
+        <!--商品详情的坑-->
+    </div>
+    <div class="contrast">
+        <ul>
+            <li class="active"><a href="javascript:;">比价购买</a></li>
+            <li><a href="javascript:;">产品参数</a></li>
+            <li><a href="javascript:;">优选评价</a></li>
+        </ul>
+    </div>
+    <div class="dz-href">
+        <a href="http://re.jd.com/cps/item/647948.html?cu=true&utm_source=newtemai.com&utm_medium=tuiguang&utm_campaign=t_1000077240_&utm_term=7a01c0a5b876451ba48e5b8c83ff62bd&abt=3" target="_blank">
+            <span></span>
+            <span class="qjd">京东商城</span>
+            <span>去购买</span>
+            <span>￥1149</span>
+        </a>
+        <a href="http://item.m.gome.com.cn/product-9111660843-1101380140.html?sid=438&wid=434&feedback=&cmpid=cps_438_434" target="_blank">
+            <span></span>
+            <span class="qjd">国美在线</span>
+            <span>去购买</span>
+            <span>￥1149</span>
+        </a>
+        <a href="https://detail.tmall.com/item.htm?id=14884934596&ali_trackid=2:mm_56297410_6560292_22340535:1488891801_3k9_310155936&upsid=1ef4fc02299692e6ed75a43ed4d5066c&clk1=1ef4fc02299692e6ed75a43ed4d5066c&sku_properties=5919063:6536025" target="_blank">
+            <span></span>
+            <span class="qjd">天猫旗舰店</span>
+            <span>去购买</span>
+            <span>￥1149</span>
+        </a>
+        <a href="http://m.suning.com/product/0070080559/102535670.html?utm_source=union&utm_medium=14&utm_campaign=5355&utm_content=0">
+            <span></span>
+            <span class="qjd">苏宁易购</span>
+            <span>去购买</span>
+            <span>￥1419</span>
+        </a>
+        <a href="http://item.feiniu.com/201506CM040000083" target="_blank">
+            <span></span>
+            <span class="qjd">飞牛网</span>
+            <span>去购买</span>
+            <span>￥1499</span>
+        </a>
+        <a href="http://hot.m.yhd.com/m_item/index.action?pmid=55093602&union_ref=50_2&cp=1" target="_blank">
+            <span></span>
+            <span class="qjd">1号店</span>
+            <span>去购买</span>
+            <span>￥1269</span>
+        </a>
+        <p>* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+    </div>
+    <div class="pj clearfix">
+        <div class="pj-t" id="pingjia">网友评论</div>
+        <!--网友评论的坑-->
+        <div id="pj-pl">
+
+        </div>
+
+        <div class="more clearfix">
+            <a href="">查看更多评价</a>
+        </div>
+    </div>
+
+
+
+    <?php include('../common/foot.html')?>
+    <?php include('../common/script.html')?>
+
+    <!--返回上级的模板-->
+    <script type="text/template" id="back-tpl">
+        {{each list as shuju i}}
+        <div class="back">
+            <a href="/">首页</a>
+            <span>&gt;</span>
+            <!--返回上一级页面且刷新页面-->
+            <a href="javascript:history.go(-2);">全部分类</a>
+            <span>&gt;</span>
+            <a href="javascript:history.go(-1);">{{shuju.category}}</a>
+        </div>
+        {{/each}}
+    </script>
+
+    <!--商品详情的模板-->
+    <script type="text/template" id="xq-tpl">
+        {{each list as shuju i}}
+        <div class="product">
+            <div class="product-c">
+                <!--<img src="" alt=""/>-->
+                {{#shuju.productImg}}
+                <a href=""></a>
+            </div>
+            <p>{{shuju.productName}}</p>
+            <div class="clearfix">
+                <ul>
+                    <li>
+                        <span>最低价:</span>
+                        <em>&nbsp;<i class="money">¥3298.00</i></em>
+                    </li>
+                    <li>
+                        <span>最低来自:</span>
+                        <em>&nbsp;
+                            {{shuju.bjShop.indexOf('京东商城')+1?'京东商城':''}}
+                            {{shuju.bjShop.indexOf('天猫旗舰店')+1?'天猫旗舰店':''}}
+                            {{shuju.bjShop.indexOf('国美在线')+1?'国美在线':''}}
+                            {{shuju.bjShop.indexOf('苏宁易购')+1?'苏宁易购':''}}
+                            {{shuju.bjShop.indexOf('飞牛网')+1?'飞牛网':''}}
+                            {{shuju.bjShop.indexOf('1号店')+1?'1号店':''}}
+                        </em>
+                    </li>
+                    <li>
+                        <span>全网评论:</span>
+                        <em>&nbsp;2条</em>
+                    </li>
+                    <li>
+                        <span>优选评论:</span>
+                        <em>&nbsp;3条</em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {{/each}}
+</script>
+    <!--网友评论的模板-->
+    <script type="text/template" id="pl-tpl">
+        {{each list as shuju i}}
+        <div class="pj-b clearfix">
+            <span>{{shuju.comName}}</span>
+            <span>{{shuju.comTime}}</span>
+            <span style="color:#ff9000;">★★★★☆</span>
+            <span>{{shuju.comFrom}}</span>
+            <p>{{shuju.comContent}}</p>
+            <a href="">回复</a>
+        </div>
+        {{/each}}
+</script>
+</div>
+</body>
+</html>

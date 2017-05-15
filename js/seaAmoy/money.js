@@ -1,0 +1,92 @@
+/**
+ * Created by Administrator on 2017/3/7.
+ */
+define(['jquery','common','template','util','bootstrap'],function($,undefined,template,util,undefined){
+    $(function(){
+        init();
+        //alert("123");
+
+        function init(){
+            getIndexMenu();
+        }
+
+        function menuToggle(){
+
+        };
+        function getIndexMenu(){
+            $.get("http://139.199.157.195:9090/api/getmoneyctrl",{categoryid:util.getQueryString('categoryId'),
+                pageid :1},function(data){
+                var html =template("mentTpl",data);
+                $(".list .row").html(html);
+                //console.log('123');
+
+
+                //console.log(data.result);//result返回的是每一页显示的内容
+
+                var htmlpro = '';
+                var index = Math.ceil(data.totalCount/data.pagesize);
+                //console.log(index);//15
+                for(var i=0;i<index;i++){
+                    htmlpro +='<option  value='+(i+1)+'>'+ (i+1)+'/'+index +'</option>'
+                }
+                $('#page').html(htmlpro);
+
+
+                //初始页数为1
+                var page = 1;
+                $("#page").on('change',function(){
+                    page = this.options[this.options.selectedIndex].value;
+                    $.get("http://139.199.157.195:9090/api/getmoneyctrl",{categoryid:util.getQueryString('categoryId'),
+                        pageid :page},function(data) {
+                        var html = template("mentTpl", data);
+                        $(".list .row").html(html);
+                    });
+                });
+
+                $(document).on('click',"#btnL",function(){
+
+                    if(page>1){
+                        page--;
+                    }else{
+                        $('#btnL').css('disabled');//禁用这个按钮
+                        alert('这已经是第一页了');
+                        return;
+                    }
+
+                    $('#page option').prop('selected',false);
+                    $('#page option').eq(page+1).prop('selected','selected');
+
+                    $.get("http://139.199.157.195:9090/api/getmoneyctrl",{categoryid:util.getQueryString('categoryId'),
+                        pageid :page},function(data) {
+                        var html = template("mentTpl", data);
+                        $(".list .row").html(html);
+                    });
+
+                });
+
+
+                $(document).on('click',"#btnR   ",function(){
+
+                    if(page<index){
+                        page++;
+                    }else{
+                        $('#btnL').css('disabled');//禁用这个按钮
+                        alert('这已经是最后一页了');
+                        return;
+                    }
+
+                    $('#page option').prop('selected',false);
+                    $('#page option').eq(page-1).prop('selected','selected');
+
+                    $.get("http://139.199.157.195:9090/api/getmoneyctrl",{categoryid:util.getQueryString('categoryId'),
+                        pageid :page},function(data) {
+                        var html = template("mentTpl", data);
+                        $(".list .row").html(html);
+                    });
+
+                })
+
+            });
+        }
+    });
+});

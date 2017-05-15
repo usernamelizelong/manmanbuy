@@ -1,0 +1,352 @@
+
+//字体图标
+//第一步：拷贝项目下面生成的font-face
+//左箭头
+/*����ͼ��*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../lib/font_960y6yj4lwyiudi/iconfont.eot');
+  src: url('../../lib/font_960y6yj4lwyiudi/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../../lib/font_960y6yj4lwyiudi/iconfont.woff') format('woff'),
+  url('../../lib/font_960y6yj4lwyiudi/iconfont.ttf') format('truetype'),
+  url('../../lib/font_960y6yj4lwyiudi/iconfont.svg#iconfont') format('svg');
+}
+/*��������ͼ����ʽ*/
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+//右箭头
+@font-face {
+  font-family: 'more';
+  src: url('../../lib/font_2jpebxxoy6lp7gb9/iconfont.eot');
+  src: url('../../lib/font_2jpebxxoy6lp7gb9/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../../lib/font_2jpebxxoy6lp7gb9/iconfont.woff') format('woff'),
+  url('../../lib/font_2jpebxxoy6lp7gb9/iconfont.ttf') format('truetype'),
+  url('../../lib/font_2jpebxxoy6lp7gb9/iconfont.svg#iconfont') format('svg');
+}
+//第二步：定义使用iconfont的样式
+//第三步：挑选相应图标并获取字体编码，应用于页面
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+//右箭头
+.more{
+  font-family:"more" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@color:#f4483e;
+@color1: #efefef;
+@color2: #eeeeee;
+@color3: #c4c4c4;
+li{
+  list-style: none;
+}
+//<!--顶部header-->
+
+.coupon-header{
+  height: 70px;
+  width: 100%;
+  //display: block;
+  position: relative;
+  background: @color;
+  margin-bottom: 20px;
+  .coupon-header-back{
+    float: left;
+    width: 50px;
+    text-align: center;
+    //position: relative;
+    padding-left: 10px;
+    .iconfont{
+      color: #fff;
+      width: 100%;
+      line-height: 70px;
+      margin: 0 auto;
+      left:10px;
+      //margin-right: 100px;
+      background: no-repeat center ;
+      position: relative;
+      font-size: 40px;
+      ::before {
+        content: "";
+        //color: yellow;
+        font-size: 17px;
+        font-family:iconfont;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  h1{
+    width: 125px;
+    //float: left;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    //margin-top: 30px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 700;
+    color:#fff
+  }
+  .coupon-header-downLoad{
+    float: right;
+    width: 50px;
+    text-align: center;
+      //position: relative;
+    padding-left: 10px;
+    .coupon-header_app{
+      display: block;
+      top: -68px;
+      width: 100%;
+      height: 70px;
+      line-height: 70px;
+      right: 20px;
+      background: url("../../images/header_app.png") no-repeat center ;
+      position: relative;
+      background-size: 40px;
+    }
+  }
+}
+
+//<!--商品列表部分-->
+.coupon-main{
+  width: 100%;
+  padding: 0;
+  position: relative;
+  //margin-bottom: 100px;
+  .coupon-main-l{
+    //padding-top: 10px;
+    .couponproduct-link{
+
+      li{
+        border-bottom:1px solid @color3;
+        margin-top: 20px;
+        position: relative;
+        .more{
+          //color:red;
+          content: "";
+          color: @color3;
+          font-weight: 700;
+          font-size: 20px;
+          position: absolute;
+          top: 14px;
+          right:33px;
+          font-family:"more";
+        }
+        a{
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          max-width: 960px;
+          min-width: 360px;
+
+
+
+          .coupon-main-pic{
+            width: 120px;
+            height: 100px;
+            overflow: hidden;
+            margin-left: 30px;
+            //float: left;
+            //padding-top: 10px;
+            //position: absolute;
+            //top: 50%;
+            //left: 50%;
+            //transform: translate3d(-50%,-50%,0);;
+            //-webkit-transform: translate3d(-50%,-50%,0);;
+            img{
+              max-width: 100px;
+              &::hover{
+                width: 120px;
+                height: 100px;
+              }
+
+            }
+          }
+          .coupon-main-info{
+            padding-left: 10px;
+            .coupon-info-tit{
+              font-weight: normal;
+              color: #333333;
+              overflow: hidden;
+              h3{
+                //height: 8px;
+                line-height: 20px;
+                font-size: 14px;
+                text-align: justify;
+                font-weight: normal;
+                border: 1px solid #ccc;
+                word-break:break-all;
+                margin-top: 0;
+                margin-bottom: 0;
+                border: none;
+              }
+              h2{
+                //height: 12px;
+                line-height: 15px;
+                font-size: 15px;
+              }
+            }
+            .coupon-info-data{
+              //height: 40px;
+              //line-height: 42px;
+              color: #ee7700;
+              margin-top: 10px;
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+}
+//其他:
+.coupon-msg{
+  //z-index: -1;
+  display: block;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 15px;
+  margin-top: 20px;
+  background: #f5f5f5;
+  padding-left: 8px;
+  border:1px solid #c4c 4c4;
+  color: #000000;
+  //position: fixed;
+  //bottom: 20px;
+
+
+  }
+
+//右侧固定图片
+.coupon-right-app{
+     display: block;
+      width: 60px;
+      height: 68px;
+      background: url("../../images/coupon/right-app.png") no-repeat;
+      //position: fixed;
+      background-size: 40px;
+      padding-right: 20px;
+      vertical-align:middle;
+    }
+
+
+//轮播图部分
+#galleryOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  transition: opacity 1s ease;
+  .visible{
+    opacity: 1;
+  }
+    #gallerySlider{
+      position: relative;
+      .placeholder{
+        height: 165px;
+        //margin: 50% auto;
+        text-align: center;
+        width: 200px;
+        overflow: hidden;
+        position: absolute;
+        top: 210px;
+        left: 50%;
+        transform:translateX(-50%);
+        ::before{
+          content:'';
+          display: inline-block;
+          height: 50%;
+          width: 1px;
+          margin-right: -1px;
+        }
+        img {
+          z-index: 10;
+          max-width: 100%;
+          max-height: 100%;
+          vertical-align: middle;
+        }
+      }
+      .rightSpring{
+        animation: rightSpring 0.3s;
+      }
+      .leftSpring{
+        animation: rightSpring 0.3s;
+      }
+    }
+  #prevArrow,#nextArrow{
+    border: none;
+    text-decoration: none;
+    background: url("../../images/coupon/arrows.png") no-repeat ;
+    opacity: .5;
+    cursor: pointer;
+    position: absolute;
+    width: 43px;
+    height: 58px;
+    top: 50%;
+    margin-top: -29px;
+    transition: opacity .2s ease;
+     &:hover{
+      opacity: 1;
+    }
+  }
+  #prevArrow{
+    background-position: left top;
+    left: 40px;
+  }
+  #nextArrow{
+    background-position: right top;
+    right: 40px;
+
+  }
+}
+
+@keyframes rightSpring  {
+  0%{
+  margin-left: 0;
+}
+  50%{
+  margin-left: -30px;
+  }
+  100%{
+    margin-left: 0px;
+  }
+}
+@keyframes leftSpring  {
+  0%{
+    margin-left: 0;
+  }
+  50%{
+    margin-left: -30px;
+  }
+  100%{
+    margin-left: 0px;
+  }
+}
+//肯德基特效页
+#pageflip{right:0px;float:right;position:relative;top:0px}
+
+#pageflip img{z-index:99;right:0px;width:50px;position:absolute;top:0px;height:52px;ms-interpolation-mode:bicubic}
+
+#pageflip .msg_block{right:0px;width:50px;position:absolute;top:-20px;right:10px;height:50px}
+

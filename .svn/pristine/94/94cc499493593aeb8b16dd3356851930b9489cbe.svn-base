@@ -1,0 +1,199 @@
+.xq-layout {
+  width: 100%;
+}
+.xq-layout a:hover {
+  text-decoration: none;
+}
+.xq-layout .back {
+  width: 100%;
+  height: 38px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #f4f4f4;
+  color: #000;
+  line-height: 38px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.xq-layout .product {
+  width: 100%;
+}
+.xq-layout .product > .product-c {
+  width: 100%;
+  height: 180px;
+  position: relative;
+}
+.xq-layout .product > .product-c > img {
+  display: block;
+  margin: 30px auto;
+}
+.xq-layout .product > .product-c > a {
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  top: 0;
+  right: 0;
+  background: url("../../images/product/brand_sc.jpg") no-repeat;
+  background-size: cover;
+}
+.xq-layout .product > p {
+  color: #000;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.xq-layout .product > div {
+  padding-left: 10px;
+}
+.xq-layout .product > div li {
+  float: left;
+  width: 50%;
+  height: 25px;
+  line-height: 25px;
+  color: #575757;
+  font-size: 14px;
+}
+.xq-layout .product > div li > span {
+  padding-left: 5px;
+}
+.xq-layout .product > div li > em {
+  font-style: normal;
+}
+.xq-layout .product > div li > em i {
+  font-style: normal;
+  color: #fe0000;
+}
+.xq-layout > .contrast {
+  width: 100%;
+  height: 50px;
+  background-color: #f2f2f2;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.xq-layout > .contrast > ul {
+  width: 100%;
+  height: 35px;
+  padding-top: 15px;
+}
+.xq-layout > .contrast > ul > .active {
+  background-color: #ff960d;
+}
+.xq-layout > .contrast > ul > li {
+  float: left;
+  width: 33.33%;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: #ffc525;
+  border: 1px solid #c14d00;
+  border-right: none;
+}
+.xq-layout > .contrast > ul > li > a {
+  color: #fff;
+  font-size: 16px;
+}
+.xq-layout > .dz-href > a {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  padding-left: 50px;
+}
+.xq-layout > .dz-href > a > span {
+  display: block;
+  float: left;
+  font-size: 16px;
+}
+.xq-layout > .dz-href > a > span:first-of-type {
+  width: 20px;
+  height: 20px;
+  background: url("../../images/product/1.png") no-repeat;
+  margin-top: 17px;
+}
+.xq-layout > .dz-href > a > span:nth-of-type(2) {
+  margin-left: 30px;
+}
+.xq-layout > .dz-href > a > span:nth-of-type(3) {
+  display: inline-block;
+  float: right;
+  width: 60px;
+  height: 30px;
+  background-color: #ff5500;
+  line-height: 30px;
+  color: #fff;
+  border-radius: 12.5px;
+  margin-top: 10px;
+  text-align: center;
+}
+.xq-layout > .dz-href > a > span:nth-of-type(4) {
+  float: right;
+  margin-right: 30px;
+  color: #d10311;
+}
+.xq-layout > .dz-href a:nth-of-type(2) span:first-of-type {
+  background: url("../../images/product/8.png");
+}
+.xq-layout > .dz-href a:nth-of-type(3) span:first-of-type {
+  background: url("../../images/product/278.png") no-repeat;
+}
+.xq-layout > .dz-href a:nth-of-type(4) span:first-of-type {
+  background: url("../../images/product/6.png") no-repeat;
+}
+.xq-layout > .dz-href a:nth-of-type(5) span:first-of-type {
+  background: url("../../images/product/161.png") no-repeat;
+}
+.xq-layout > .dz-href a:nth-of-type(6) span:first-of-type {
+  background: url("../../images/product/13.png") no-repeat;
+}
+.xq-layout > .dz-href > p {
+  color: #888;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 4px solid #7a7a7a;
+  padding-left: 10px;
+}
+.xq-layout > .pj > .pj-t {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  color: #000;
+  background-color: #dbdbdb;
+  text-align: center;
+}
+.xq-layout > .pj .pj-b {
+  width: 100%;
+  margin-top: 15px;
+  color: #000;
+}
+.xq-layout > .pj .pj-b > span {
+  float: left;
+  display: block;
+  width: 50%;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+.xq-layout > .pj .pj-b > span:nth-child(even) {
+  text-align: right;
+  padding-right: 15px;
+}
+.xq-layout > .pj .pj-b > p {
+  color: #666;
+  font-size: 14px;
+  padding: 0 15px 10px 15px;
+}
+.xq-layout > .pj .pj-b > a {
+  padding-left: 15px;
+}
+.xq-layout > .pj > .more {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  background-color: #dfdfdf;
+  text-align: center;
+  line-height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}

@@ -1,0 +1,151 @@
+@charset "utf-8";
+/*
+@名称: base
+@功能: 重设浏览器默认样式
+*/
+/*字体图标*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('font_ve1kc98hgswqm2t9/iconfont.eot');
+    src: url('font_ve1kc98hgswqm2t9/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('font_ve1kc98hgswqm2t9/iconfont.woff') format('woff'),
+    url('font_ve1kc98hgswqm2t9/iconfont.ttf') format('truetype'),
+    url('font_ve1kc98hgswqm2t9/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*css */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+a {
+    font-family: "Microsoft YaHei";
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    display:block;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    color: #000;
+    background: #fff;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+/*������ɫ��*/
+.col-red {
+    color: #C81623 !important;
+}
+
+/*������*/
+.w {
+    /*����*/
+    width: 960px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+.pr {
+    position: relative;
+}
+.pa {
+    position: absolute;
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,153 @@
+/*ҳ������*/
+.view_layout {
+  width: 100%;
+  background-color: #fdfdfd;
+  position: relative;
+  /*ͷ����ʽ*/
+}
+.view_layout > header {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  background-color: #ff841d;
+  box-shadow: 0px 1px 4px #9c9c9c;
+}
+.view_layout > header > .h-back {
+  float: left;
+}
+.view_layout > header > .h-back > a {
+  display: block;
+  width: 50px;
+  text-align: center;
+  color: #fff;
+}
+.view_layout > header > .h-back > a a:hover {
+  text-decoration: none;
+}
+.view_layout > header > .h-back > a ::before {
+  content: '';
+  font-weight: bold;
+}
+.view_layout > header > span {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+.view_layout .product_link {
+  width: 100%;
+  padding: 10px;
+}
+.view_layout .product_link > form {
+  width: 100%;
+}
+.view_layout .product_link > form > h3 {
+  font-size: 12px;
+  line-height: 30px;
+  color: #636363;
+}
+.view_layout .product_link > form > input {
+  padding: 6px 0;
+  width: 100%;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  color: #ccc;
+}
+.view_layout .reset_button {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.view_layout .reset_button .sub_price {
+  width: 160px;
+}
+.view_layout .reset_button .sub_reset {
+  width: 80px;
+}
+.view_layout .reset_button > input[class^="sub"] {
+  height: 40px;
+  line-height: 38px;
+  font-size: 16px;
+  border-radius: 100px;
+  border: 1px solid #cbcbcb;
+  background-color: #fdfdfd;
+  color: #333333;
+}
+.view_layout .promotion {
+  margin-left: 15px;
+}
+.view_layout .promotion > h3 {
+  font-size: 14px;
+  line-height: 20px;
+}
+.view_layout .promotion > p {
+  line-height: 20px;
+  color: #989898;
+}
+.view_layout .blank {
+  width: 100%;
+  height: 600px;
+}
+.view_layout .banner_down {
+  width: 100%;
+  height: 50px;
+  background-color: #f8f6f3;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.view_layout .banner_down > span {
+  width: 50px;
+  height: 50px;
+  float: left;
+  position: relative;
+  cursor: pointer;
+}
+.view_layout .banner_down > span > i {
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  font-size: 25px;
+  color: #ccc;
+}
+.view_layout .banner_down .baner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.view_layout .banner_down .baner > .manlogo {
+  width: 41px;
+  height: 41px;
+  float: left;
+  background-image: url("../../images/manmanlogo.png");
+  background-repeat: no-repeat;
+  background-size: 41px;
+  margin-top: 4px;
+  margin-right: 5px;
+}
+.view_layout .banner_down .baner > h3 {
+  font-size: 18px;
+  color: #878787;
+  line-height: 30px;
+}
+.view_layout .banner_down .baner > p {
+  color: #878787;
+  float: left;
+}
+.view_layout .banner_down .baner .downopen {
+  width: 74px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  border-radius: 4px;
+  color: #fff;
+  border-bottom: 3px solid #fd5501;
+  background-color: #fd7701;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}

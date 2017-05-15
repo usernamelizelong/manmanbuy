@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>比价-商品列表</title>
+    <?php include('../common/Bstyle.html')?>
+
+
+
+
+</head>
+<body>
+
+<?php include('../common/Bheader.html')?>
+<?php include('../common/Bsearch.html')?>
+<div id="header01"></div>
+
+<!--商品的列表-->
+
+
+    <div class="product-list-content" id="prolist">
+
+        <!--商品的导航-->
+        <div class="reorder r-border-b" id="reorder">
+            <ul>
+                <li><a href="###" title="按综合排序" class="on">综合</a> </li>
+                <li><a href="###" title="按销量排序" >销量</a> </li>
+                <li><a href="###" title="按价格排序" >价格</a> </li>
+                <li class="filter" ><a href="javascript:;" id="filter"><i class="iconfont">&#xe633;</i>筛选</a> </li>
+
+            </ul>
+        </div>
+
+
+        <div class="product-list">
+
+
+
+
+
+
+
+        </div>
+        <!--商品的分页部分-->
+
+
+
+    </div>
+
+    <div class="page">
+            <table width="100%">
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="javascript:;" id="prePage">上一页</a>
+                    </td>
+                    <td>
+                        <select id="selectPage">
+
+
+                        </select>
+
+                    </td>
+                    <td>
+                        <a href="javascript:;" id="nextPage">下一页</a>
+                    </td>
+                </tr>
+
+                </tbody>
+
+
+            </table>
+
+        </div>
+
+
+
+   <!--筛选-->
+   <div id="productfilter" class="search-filter">
+       <div class="headertit">
+           筛选
+           <i class="iconfont" id="close">&#xe652;</i>
+       </div>
+       <!--分组-->
+       <div class="group ui-border-tb filed">
+           <div class="row current">
+               <!--列的头部-->
+              <div class="rowheader">
+                  <span class="tit">品牌</span>
+                  <span class="seltit">全部品牌</span>
+                  <span class="down iconfont" data-show='show'>&#xe600;</span>
+              </div>
+               <!--列的身体部分-->
+               <div class="rowbody">
+
+               </div>
+
+           </div>
+
+           <div class="row">
+               <!--列的头部-->
+               <div class="rowheader">
+                   <span class="tit">空调功率</span>
+                   <span class="seltit">全部空调功率</span>
+                   <span class="down iconfont">&#xe600;</span>
+               </div>
+               <!--列的身体部分-->
+               <div class="rowbody">
+                   <ul>
+                       <li class="on">
+                           <a href="javascript:;">全部空调功率</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">1匹（约10-15㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">1.5匹（约12-23㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">2匹（约21-34㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">2.5匹（约27-42㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">3匹（约32-50㎡）</a>
+                       </li>
+
+
+                   </ul>
+               </div>
+
+           </div>
+
+           <div class="row">
+               <!--列的头部-->
+               <div class="rowheader">
+                   <span class="tit">冷暖类型</span>
+                   <span class="seltit">全部冷暖类型</span>
+                   <span class="down iconfont">&#xe600;</span>
+               </div>
+               <!--列的身体部分-->
+               <div class="rowbody">
+                   <ul>
+                       <li class="on">
+                           <a href="javascript:;">全部冷暖类型</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">冷暖类型</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">单冷空调</a>
+                       </li>
+
+
+                   </ul>
+               </div>
+
+           </div>
+
+           <div class="row">
+               <!--列的头部-->
+               <div class="rowheader">
+                   <span class="tit">空调类别</span>
+                   <span class="seltit">全部空调类别</span>
+                   <span class="down iconfont">&#xe600;</span>
+               </div>
+               <!--列的身体部分-->
+               <div class="rowbody">
+                   <ul>
+                       <li class="on">
+                           <a href="javascript:;">全部空调类别</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">挂壁式空调</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">风管式式空调</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">天井式空调</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">立柜式调</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">移动空调</a>
+                       </li>
+
+
+                   </ul>
+               </div>
+
+           </div>
+
+           <div class="row">
+               <!--列的头部-->
+               <div class="rowheader">
+                   <span class="tit">空调功率</span>
+                   <span class="seltit">全部空调功率</span>
+                   <span class="down iconfont">&#xe600;</span>
+               </div>
+               <!--列的身体部分-->
+               <div class="rowbody">
+                   <ul>
+                       <li class="on">
+                           <a href="javascript:;">全部空调功率</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">1匹（约10-15㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">1.5匹（约12-23㎡）</a>
+                       </li>
+                       
+
+
+                   </ul>
+               </div>
+
+           </div>
+
+
+           <div class="row">
+               <!--列的头部-->
+               <div class="rowheader">
+                   <span class="tit">品牌</span>
+                   <span class="seltit">全部品牌</span>
+                   <span class="down iconfont">&#xe600;</span>
+               </div>
+               <!--列的身体部分-->
+               <div class="rowbody">
+                   <ul>
+                       <li class="on">
+                           <a href="javascript:;">全部品牌</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">格力</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">美的</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">海尔</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">奥克斯</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">海信</a>
+                       </li>
+
+
+                   </ul>
+               </div>
+
+           </div>
+
+           <div class="row">
+               <!--列的头部-->
+               <div class="rowheader">
+                   <span class="tit">空调功率</span>
+                   <span class="seltit">全部空调功率</span>
+                   <span class="down iconfont">&#xe600;</span>
+               </div>
+               <!--列的身体部分-->
+               <div class="rowbody">
+                   <ul>
+                       <li class="on">
+                           <a href="javascript:;">全部空调功率</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">1匹（约10-15㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">1.5匹（约12-23㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">2匹（约21-34㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">2.5匹（约27-42㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">3匹（约32-50㎡）</a>
+                       </li>
+
+
+                   </ul>
+               </div>
+
+           </div>
+
+           <div class="row">
+               <!--列的头部-->
+               <div class="rowheader">
+                   <span class="tit">品牌</span>
+                   <span class="seltit">全部品牌</span>
+                   <span class="down iconfont">&#xe600;</span>
+               </div>
+               <!--列的身体部分-->
+               <div class="rowbody">
+                   <ul>
+                       <li class="on">
+                           <a href="javascript:;">全部品牌</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">格力</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">美的</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">海尔</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">奥克斯</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">海信</a>
+                       </li>
+
+
+                   </ul>
+               </div>
+
+           </div>
+
+           <div class="row">
+               <!--列的头部-->
+               <div class="rowheader">
+                   <span class="tit">空调功率</span>
+                   <span class="seltit">全部空调功率</span>
+                   <span class="down iconfont">&#xe600;</span>
+               </div>
+               <!--列的身体部分-->
+               <div class="rowbody">
+                   <ul>
+                       <li class="on">
+                           <a href="javascript:;">全部空调功率</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">1匹（约10-15㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">1.5匹（约12-23㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">2匹（约21-34㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">2.5匹（约27-42㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">3匹（约32-50㎡）</a>
+                       </li>
+
+
+                   </ul>
+               </div>
+
+           </div>
+
+           <div class="row">
+               <!--列的头部-->
+               <div class="rowheader">
+                   <span class="tit">品牌</span>
+                   <span class="seltit">全部品牌</span>
+                   <span class="down iconfont">&#xe600;</span>
+               </div>
+               <!--列的身体部分-->
+               <div class="rowbody">
+                   <ul>
+                       <li class="on">
+                           <a href="javascript:;">全部品牌</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">格力</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">美的</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">海尔</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">奥克斯</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">海信</a>
+                       </li>
+
+
+                   </ul>
+               </div>
+
+           </div>
+
+           <div class="row">
+               <!--列的头部-->
+               <div class="rowheader">
+                   <span class="tit">空调功率</span>
+                   <span class="seltit">全部空调功率</span>
+                   <span class="down iconfont">&#xe600;</span>
+               </div>
+               <!--列的身体部分-->
+               <div class="rowbody">
+                   <ul>
+                       <li class="on">
+                           <a href="javascript:;">全部空调功率</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">1匹（约10-15㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">1.5匹（约12-23㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">2匹（约21-34㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">2.5匹（约27-42㎡）</a>
+                       </li>
+                       <li>
+                           <a href="javascript:;">3匹（约32-50㎡）</a>
+                       </li>
+
+
+                   </ul>
+               </div>
+
+           </div>
+
+
+       </div>
+
+
+
+   </div>
+
+
+
+    <!--遮罩层-->
+ <div class="mask-filter" id="mask"></div>
+
+<script type="text/tep" id="rowli-item">
+    <ul>
+        <li class="on">
+            <a href="javascript:;">全部品牌</a>
+        </li>
+        {{each list as brand i}}
+           <li class="" data-id='{{brand.brandId}}'>
+            <a href="javascript:;">{{brand.brandName}}</a>
+        </li>
+
+        {{/each}}
+
+
+    </ul>
+
+
+</script>
+
+
+
+<script type="text/tpl" id="product-item">
+
+
+    <ul>
+    {{each list as product i}}
+    <li class="item r-border-b"  data-id="{{ product.productId }}">
+                    <a href="javascript:;"  class="goto"></a>
+                    <div class="pic">
+
+                        {{#product.productImg}}
+                    </div>
+
+                    <div class="clearfix inf">
+                        <div class="tit" name="{{product.productName}}">{{product.productName}}</div>
+                        <div class="price"> <em>{{product.productPrice}}</em></div>  <div class="other">
+                        <div class="mall">{{product.productQuot}}</div>
+                        <div class="sales">{{product.productCom}}</div>
+                    </div>
+                    </div>
+
+                </li>
+    {{/each}}
+        <!--商品的列表-->
+    </ul>
+
+</script>
+<?php include('../common/foot.html')?>
+<?php include('../common/script.html')?>
+
+
+
+</body>
+</html>

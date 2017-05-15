@@ -1,0 +1,64 @@
+define(['jquery','template','util'],function ($,template,util) {
+
+    // var pageid = util.getQueryString("pageid");
+
+    // 定义模版的方法
+    template.helper('getAmount',getAmount)
+
+
+    /*页面打开就获取第一页的数据*/
+
+    $.get('http://139.199.157.195:9090/api/getmoneyctrl',{},function (result) {
+        var html = template('getmoneyctrl-tpl',result);
+        $('#getmoneyctrl').html(html);
+
+        var html1 = template('getmoneyctrl-paging-tpl',result);
+        $('#getmoneyctrl-paging').html(html1);
+
+
+    })
+
+
+
+    $('#getmoneyctrl-paging').on('change','#paging',function () {
+        var pageid = $('#paging option:selected').html();
+        $.get('http://139.199.157.195:9090/api/getmoneyctrl',{pageid:pageid},function (result) {
+            var html = template('getmoneyctrl-tpl',result);
+            $('#getmoneyctrl').html(html);
+        })
+    })
+
+
+    $('#getmoneyctrl-paging').on('click','a',function () {
+        console.log($('#getmoneyctrl-paging ul li a').attr("href"))
+        var pageid = util.getQueryString("pageid");
+        $.get('http://139.199.157.195:9090/api/getmoneyctrl',{pageid:pageid},function (result) {
+            var html1 = template('getmoneyctrl-paging-tpl',result);
+            $('#getmoneyctrl-paging').html(html1);
+
+        })
+        return false
+    })
+
+
+
+
+
+
+    /*获取字符中的数字*/
+    function getAmount(key) {
+        return key.match(/\d+/)[0]
+    }
+
+    function getQueryString (key) {
+        var search = location.search.slice(1);
+        var searchArr = search.split('&');
+        var tempArr = null;
+        var searchObj = {};
+        for( var i =0, len = searchArr.length; i < len; i++) {
+            tempArr = searchArr[i].split('=');
+            searchObj[ tempArr[0] ] = tempArr[1];
+        }
+        return arguments.length? searchObj[key]: searchObj;
+    }
+})

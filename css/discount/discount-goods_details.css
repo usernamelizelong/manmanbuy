@@ -1,0 +1,184 @@
+.discount-goods_details {
+  width: 100%;
+  height: 100%;
+}
+.discount-goods_details > .discount-header {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background: #ff841d;
+}
+.discount-goods_details > .discount-header > .discount-back,
+.discount-goods_details > .discount-header .discount-menu {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 44px;
+}
+.discount-goods_details > .discount-header > .discount-back {
+  left: 15px;
+  color: white;
+  top: 10px;
+}
+.discount-goods_details > .discount-header > .discount-menu {
+  display: block;
+  width: 50px;
+  height: 44px;
+  right: 8px;
+  background-image: url("../../imgs/home/header_app.png");
+  background-repeat: no-repeat;
+  background-size: 40px 35px;
+  top: 5px;
+}
+.discount-goods_details > .discount-header > h1 {
+  line-height: 44px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  font-family: Microsoft YaHei;
+}
+.discount-goods_details > div #aspanetForm {
+  width: 100%;
+}
+.discount-goods_details > div #aspanetForm > .container {
+  width: 100%;
+  max-width: 960px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content {
+  padding: 4px 10px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > h3 {
+  margin: 10px auto 5px auto;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Microsoft YaHei;
+  color: #333;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > h4 {
+  margin: 10px auto 5px auto;
+  font-size: 16px;
+  color: #ff6c00;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > .info span {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Microsoft YaHei;
+  color: #999;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > .content {
+  width: 100%;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > .content > .picwrap {
+  width: 160px;
+  float: right;
+  margin: 12px auto auto 10px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > .content > .picwrap > img {
+  display: block ;
+  width: 100px;
+  margin: 0 auto;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > .content > .conn {
+  font-size: 16px;
+  line-height: 24px;
+  color: #606060;
+  padding-bottom: 20px;
+  word-break: break-all;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > .golink {
+  height: 40px;
+  line-height: 40px ;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > .golink > a {
+  display: block;
+  height: 40px;
+  background: #ff9900;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  margin: 20px 10px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .img {
+  text-align: center;
+  margin: 20px 10px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .img img {
+  width: 100%;
+  height: auto;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .comment > .tit {
+  font-size: 16px;
+  padding: 6px 8px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .comment > .reply {
+  padding: 6px 8px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .comment > .reply > .form {
+  width: 98%;
+  border: 2px solid #ECEAE8;
+  border-radius: 2px;
+  padding: 4px 0 0 4px;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .comment > .reply > .form > #ctl00_ContentBody_txt_nr {
+  width: 100%;
+  height: 68px;
+  resize: none;
+  border: none;
+  line-height: 22px;
+  font-size: 14px;
+  color: #333;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .comment > .reply > .form > .ctrl {
+  width: 99%;
+  height: 36px;
+  background: #fbfbfb;
+  margin-left: -4px;
+  border-top: 1px solid #F2F2F2;
+  padding: 0;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .comment > .reply > .form > .ctrl > .tjdp {
+  width: 100px;
+  height: 39px;
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  background: #ff841d;
+  border-right: 2px solid #ff841d;
+  border-bottom: 2px solid #ff841d;
+  float: right;
+  color: white;
+  padding: 0;
+}
+.discount-goods_details > .homePage {
+  height: 36px;
+  background: #bebebe;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  line-height: 36px;
+  padding-left: 8px;
+  font-size: 14px;
+}
+.discount-goods_details > .download_tab {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+}
+.discount-goods_details > .download_tab > a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.discount-goods_details > .download_tab > a > img {
+  width: 70px;
+  height: 70px;
+}

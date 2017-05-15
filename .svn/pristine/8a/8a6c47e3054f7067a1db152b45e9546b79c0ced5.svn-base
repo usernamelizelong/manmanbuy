@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <?php include('../common/Bstyle.html')?>
+
+</head>
+<body>
+<div class="discount-goods_details">
+    <!-- 跳转箭头 returnKey（返回键）-->
+    <div class="discount-header">
+        <a href="javascript:history.go(-1);" class="discount-back iconfont icon-back"></a>
+        <h1>国内折扣</h1>
+        <a href="" class="discount-menu"></a>
+    </div>
+    <div>
+        <form action="#" id="aspanetForm">
+            <div class="container">
+                <!-- 商品详情的坑-->
+            </div>
+        </form>
+
+    </div>
+    <!-- 链接首页-->
+
+    <div class="download_tab">
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">
+            <img src="../../images/common/right-app.png" alt=""/>
+        </a>
+    </div>
+
+</div>
+<script id="discount-goods_details" type="text/html">
+    {{each list }}
+    <div class="row cu-content">
+        <!-- 详情介绍-->
+        <!-- 创建一个id-->
+        <div class="col-md-12 col content-data='{{$value.productid}}'">
+            <h3>{{$value.productName}}</h3>
+            <h4>{{$value.productPinkage}}</h4>
+
+            <div class="info">
+                <span>{{$value.productFrom}}</span>
+                <span>{{$value.productTime}}</span>
+                <span>{{$value.productTips}}</span>
+            </div>
+            <div class="content clearfix">
+                <div class="picwrap">
+                    {{#$value.productImg}}
+                </div>
+                <div class="conn">
+                    <div>{{$value.productInfo}}</div>
+                </div>
+
+            </div>
+            <div class="golink">
+                <a href="#">前往购买</a>
+            </div>
+        </div>
+        <!-- 二维码图片-->
+        <div class=" col-md-12 img">
+            <img src="../../images/discount/mmbweixin2.png" alt=""/>
+        </div>
+        <!-- 评论发表 (comment)-->
+        <div class="col-md-12 comment">
+            {{#$value.productComment}}
+        </div>
+        <div class="homePage">
+            <a href="/">首页</a>
+            &nbsp;>&nbsp;
+            <a href="../../htmls/money/moneyctrl.html">超值推荐</a>&nbsp;>&nbsp;{{$value.productName}}
+        </div>
+    </div>
+
+
+    {{/each}}
+
+
+</script>
+<?php include('../common/foot.html')?>
+<?php include('../common/Bscript.html')?>
+</body>
+</html>

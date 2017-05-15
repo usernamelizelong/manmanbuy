@@ -1,0 +1,9 @@
+/**
+ * Created by linruilian on 2017/3/6.
+ */
+
+$.get("http://mmb.ittun.com/api/getcoupon",{},function(result) {
+    var html = template("couponproduct-tpl",result);
+    $('.couponproduct-link').html(html);
+    console.log("3333")
+})

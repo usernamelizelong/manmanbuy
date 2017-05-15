@@ -1,0 +1,57 @@
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+body {
+  background: #ebebeb;
+}
+.brief {
+  padding: 5px;
+  padding-bottom: 0px;
+}
+.brief .briefin {
+  background: #f9f9f9;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #666;
+  border: 1px solid #ccc;
+}
+.brief .briefin .fl_t a {
+  background: url(../../images/category/cg-arrow1.gif) right center no-repeat;
+  line-height: 40px;
+  height: 40px;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-left: 16px;
+  display: block;
+}
+.brief .briefin .fl_all {
+  width: 100%;
+  margin-left: 2px;
+  background: #f9f9f9;
+  margin-top: -1px;
+  border-right: none;
+}
+.brief .briefin .divs {
+  width: 100%;
+  margin-left: -1px;
+  background: #f9f9f9;
+  margin-top: -1px;
+}
+#table-tr {
+  background: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  text-align: center;
+  width: 33.33%;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+}
+.fl_all {
+  display: none;
+}

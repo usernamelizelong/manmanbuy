@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../lib/font_960y6yj4lwyiudi/iconfont.eot');
+  src: url('../../lib/font_960y6yj4lwyiudi/iconfont.eot?#iefix') format('embedded-opentype'), url('../../lib/font_960y6yj4lwyiudi/iconfont.woff') format('woff'), url('../../lib/font_960y6yj4lwyiudi/iconfont.ttf') format('truetype'), url('../../lib/font_960y6yj4lwyiudi/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+li {
+  list-style: none;
+}
+.couponindex-header {
+  height: 70px;
+  width: 100%;
+  position: relative;
+  background: #f4483e;
+  margin-bottom: 20px;
+}
+.couponindex-header .couponindex-header-back {
+  float: left;
+  width: 50px;
+  text-align: center;
+  padding-left: 10px;
+}
+.couponindex-header .couponindex-header-back .iconfont {
+  color: #fff;
+  width: 100%;
+  line-height: 70px;
+  left: 10px;
+  background: no-repeat center;
+  position: relative;
+  font-size: 40px;
+}
+.couponindex-header .couponindex-header-back .iconfont ::before {
+  content: "";
+  font-size: 17px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "iconfont" !important;
+}
+.couponindex-header h1 {
+  width: 100px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+}
+.couponindex-header .couponindex-header-downLoad {
+  float: right;
+  width: 50px;
+  text-align: center;
+  padding-left: 10px;
+}
+.couponindex-header .couponindex-header-downLoad .couponindex-header_app {
+  display: block;
+  top: -68px;
+  right: 20px;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  background: url("../../images/header_app.png") no-repeat center;
+  position: relative;
+  background-size: 40px;
+}
+.couponindex-main {
+  text-align: left;
+  width: 100%;
+}
+.couponindex-main .couponindex-model {
+  margin: 10px auto;
+}
+.couponindex-main .couponindex-model .couponindex-box {
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+.couponindex-main .couponindex-model .couponindex-box li {
+  height: 100px;
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  display: block;
+  margin-left: 15px;
+  text-align: center;
+}
+.couponindex-main .couponindex-model .couponindex-box li a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.couponindex-main .couponindex-model .couponindex-box li a img {
+  margin-top: 5px;
+  max-height: 50px;
+  width: 50px;
+}
+.couponindex-msg {
+  display: block;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 15px;
+  margin-top: 20px;
+  background: #f5f5f5;
+  padding-left: 8px;
+  border: 1px solid #c4c4c4;
+  color: #000000;
+}
+.couponindex-right-app {
+  display: block;
+  width: 60px;
+  height: 68px;
+  background: url("../../images/coupon/right-app.png") no-repeat;
+  background-size: 40px;
+  padding-right: 20px;
+  vertical-align: middle;
+}

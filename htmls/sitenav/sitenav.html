@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商城导航 -- 慢慢买</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!--第三方插件样式-->
+
+    <!--公共样式-->
+
+    <!--自己的样式-->
+    <?php include('../common/Bstyle.html')?>
+
+</head>
+<body>
+<!--页面结构-->
+<div class="mm-layout">
+    <!--头部-->
+    <header>
+        <div class="h-back">
+            <a href="/" class="iconfont">&#xe697;</a>
+        </div>
+        <div class="h-app">
+            <a href=""></a>
+        </div>
+        <span>商城导航</span>
+    </header>
+    <!--商城导航列表-->
+    <div class="list clearfix">
+
+    </div>
+    <!--底部-->
+    <!--商城列表底部-->
+    <div class="bottom">
+        <a href="/">首页</a>
+        <span>&gt;</span>
+        <a href="">商城导航</a>
+    </div>
+
+
+    <!--app下载-->
+    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" id="app"></a>
+    <?php include('../common/foot.html')?>
+</div>
+</body>
+<?php include('../common/script.html')?>
+<script type="text/template" id="sitenav-tpl">
+    {{each list as value i}}
+    <div class='list-t'>
+        <a href="{{value.navHref}}">
+            <img src="{{value.navImg}}" alt=""/>&nbsp;&nbsp;&nbsp;
+            <span>{{value.navTitle}}</span>
+        </a>
+    </div>
+    {{/each}}
+</script>
+</html>

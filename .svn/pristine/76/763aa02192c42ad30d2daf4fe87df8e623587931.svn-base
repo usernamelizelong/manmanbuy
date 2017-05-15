@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买-肯德基优惠券</title>
+    <!--第三方的样式-->
+    <!--<link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">-->
+    <!--&lt;!&ndash;引用公共的样式&ndash;&gt;-->
+    <!--<link rel="stylesheet" href="../../css/common/base.css">-->
+    <!--&lt;!&ndash;引用自己的样式&ndash;&gt;-->
+    <!--<link rel="stylesheet" href="../../css/coupon/couponproduct.css">-->
+    <?php include('../common/Bstyle.html')?>
+
+</head>
+<body>
+    <!--顶部header-->
+    <div id="coupon-header" class="coupon-header clearfix" >
+        <div class="coupon-header-back">
+            <a href="./coupon.html" class="iconfont icon-back"></a>
+        </div>
+        <h1>肯德基优惠券</h1>
+        <div class="coupon-header-downLoad">
+            <a href="#" class="coupon-header_app"></a>
+        </div>
+    </div>
+    <!--麦肯基广告栏-->
+    <div id="pageflip">
+
+        <a href="http://www.jq22.com" target="_blank"><img width="307" height="319" alt="www.jq22.com" src="../../images/coupon/KFC.jpg"></a>
+
+        <div class="msg_block"></div>
+
+    </div>
+    <!--头部文字部分-->
+    <div class="coupon-top">
+        <p style="font-size:12px; text-align:center; color:#999; padding:10px 0px;">
+            --点餐前出示手机中的优惠券，即可享受优惠--
+        </p>
+    </div>
+
+    <!--主体列表模板部分-->
+    <div class="coupon-main">
+            <div class="coupon-main-l">
+                <ul class="couponproduct-link" >
+                    <!--<li c>-->
+                        <!--<a href="#" title="草莓圣代/巧克力圣代 2017年3月凭肯德基优惠券">-->
+                            <!--&lt;!&ndash;图片&ndash;&gt;-->
+                            <!--<div class="coupon-main-pic f_left">-->
+                                <!--<img class="lazy" data-original="../../images/coupon/ice.jpg" alt="草莓圣代/巧克力圣代 2017年3月凭肯德基优惠券">-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash;文字&ndash;&gt;-->
+                            <!--<div class="coupon-main-info f_left">-->
+                                <!--<div class="coupon-info-tit">-->
+                                    <!--<h3>C17  草莓圣代/巧克力圣代 2017年3月凭肯德基优惠券</h3>-->
+                                    <!--<h2><span>￥</span>7</h2>-->
+                                <!--</div>-->
+                                <!--<div class="coupon-info-data">有效期至3月31日</div>-->
+                            <!--</div>-->
+                            <!--<div class="more f_right">&#xe6a7;</div>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--&lt;!&ndash;其他&ndash;&gt;-->
+    <div class="coupon-msg">
+        <div class="coupon-msg-link">
+            <a href="/">首页</a> > <a href="./coupon.html">优惠卷</a> > <a href="###">肯德基优惠卷</a>
+        </div>
+    </div>
+    <!--右侧固定图片-->
+
+    <div style="position:fixed;right:0;bottom:30px;z-index:2">
+        <a href="#" class="coupon-right-app"></a>
+    </div>
+    <!--底部-->
+    <?php include('../common/foot.html')?>
+
+
+    <!--轮播图部分-->
+    <div id="galleryOverlay" class="visible ">
+        <div id="gallerySlider">
+            <div class="placeholder" id="placeholder">
+
+            </div>
+            <div class="rightSpring"></div>
+            <div class="leftSpring"></div>
+        </div>
+        <a href="###" id="prevArrow"></a>
+        <a href="###" id="nextArrow"></a>
+    </div>
+
+
+
+    <?php include('../common/script.html')?>
+    <!--轮播图模板-->
+    <script type="text/html" id="sliderList-tpl">
+        {{ each result }}
+        <div class="sliderList" id="sliderList">
+            {{ couponProductImg }}
+        </div>
+        {{ /each }}
+    </script>
+
+    <!--主体列表模板部分-->
+    <script id="couponproduct-tpl" type="text/html">
+               {{ each result }}
+               <li id="couponproduct-mask" data-productId="{{ $value.couponProductId }}">
+                    <a href="#" title="" class="row" >
+                        <div class="coupon-main-pic f_left col-xs-6">
+                            {{ #$value.couponProductImg }}
+                        </div>
+                        <div class="coupon-main-info f_left col-xs-6">
+                            <div class="coupon-info-tit">
+                                <h3>{{ $value.couponProductName }}</h3>
+                                <h2>{{ $value.couponProductPrice }}</h2>
+                            </div>
+                            <div class="coupon-info-data f_left">{{ $value.couponProductTime }}</div>
+                        </div>
+                        <div class="more ">&#xe6a7;</div>
+                    </a>
+
+               </li>
+               {{ /each }}
+    </script>
+
+    <!--&lt;!&ndash;引用jq&ndash;&gt;-->
+    <!--<script src="../../lib/jquery/jquery.js"></script>-->
+    <!--<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>-->
+    <!--<script src="../../js/common/util.js"></script>-->
+    <!--<script src="../../lib/terseBanner/terseBanner.js"></script>-->
+    <!--&lt;!&ndash;<script src="../../lib/jquery-lazy/jquery.lazyload.min.js"></script>&ndash;&gt;-->
+    <!--&lt;!&ndash;引用template&ndash;&gt;-->
+    <!--<script src="../../lib/artTemplate-3.0.1/template.js"></script>-->
+    <!--引用自己的js-->
+    <!--<script src="../../js/coupon/couponproduct.js"></script>-->
+</body>
+</html>

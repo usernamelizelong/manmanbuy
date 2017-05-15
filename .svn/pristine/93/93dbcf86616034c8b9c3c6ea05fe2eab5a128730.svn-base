@@ -1,0 +1,204 @@
+
+//字体图标
+//第一步：拷贝项目下面生成的font-face
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../lib/font_960y6yj4lwyiudi/iconfont.eot');
+  src: url('../../lib/font_960y6yj4lwyiudi/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../../lib/font_960y6yj4lwyiudi/iconfont.woff') format('woff'),
+  url('../../lib/font_960y6yj4lwyiudi/iconfont.ttf') format('truetype'),
+  url('../../lib/font_960y6yj4lwyiudi/iconfont.svg#iconfont') format('svg');
+}
+//第二步：定义使用iconfont的样式
+//第三步：挑选相应图标并获取字体编码，应用于页面
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+@color:#f4483e;
+@color1: #efefef;
+@color2: #eeeeee;
+@color3: #c4c4c4;
+li{
+  list-style: none;
+}
+//<!--顶部header-->
+
+.coupon-header{
+  height: 70px;
+  width: 100%;
+  //display: block;
+  position: relative;
+  background: @color;
+  margin-bottom: 20px;
+  .coupon-header-back{
+    float: left;
+    width: 50px;
+    text-align: center;
+    //position: relative;
+    padding-left: 10px;
+    .iconfont{
+      color: #fff;
+      width: 100%;
+      line-height: 70px;
+      margin: 0 auto;
+      left:10px;
+      //margin-right: 100px;
+      background: no-repeat center ;
+      position: relative;
+      font-size: 17px;
+      ::before {
+        content: "";
+        //color: yellow;
+        font-size: 17px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family:"iconfont" !important;
+      }
+    }
+
+
+  }
+  h1{
+    width: 122px;
+    //float: left;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    //margin-top: 30px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 700;
+    color:#fff
+  }
+  .coupon-header-downLoad{
+    float: right;
+    width: 50px;
+    text-align: center;
+      //position: relative;
+    padding-left: 10px;
+    .coupon-header_app{
+      display: block;
+      top: -68px;
+      width: 100%;
+      height: 70px;
+      line-height: 70px;
+      right: 20px;
+      background: url("../../images/header_app.png") no-repeat center ;
+      position: relative;
+      background-size: 40px;
+    }
+  }
+}
+
+//主体列表部分
+.coupon-main{
+  width: 100%;
+  height: 100px;
+  border-bottom:1px solid @color3;
+  padding: 0px;
+  .coupon-main-l{
+    //padding-top: 10px;
+  li{
+    a{
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+
+        .coupon-main-pic{
+          width: 120px;
+          height: 100px;
+          overflow: hidden;
+          float: left;
+          //padding-top: 10px;
+          img{
+            max-width: 100px;
+          }
+        }
+        .coupon-main-info{
+          padding-left: 10px;
+            .coupon-info-tit{
+                  font-weight: 700;
+                  color: #333333;
+              h3{
+                height: 8px;
+                line-height: 23px;
+                font-size: 17px;
+                text-align: justify;
+                font-weight: normal;
+                word-break:break-all;
+                margin-top: 0;
+                margin-bottom: 0;
+              }
+              h2{
+                height: 12px;
+                line-height: 24px;
+                font-size: 15px;
+              }
+            }
+            .coupon-info-data{
+              height: 40px;
+              line-height: 42px;
+              color: #ee7700;
+              //margin-top: 10px;
+            }
+        }
+    }
+  }
+
+
+
+
+  }
+  .coupon-main-r{
+
+    position: relative;
+    a{
+      display: block;
+      width: 20px;
+      height: 25px;
+      background:url("../../images/coupon/arr-right.jpg") no-repeat #fff ;
+      position: absolute;
+      background-size:20px;
+      color: #fff;
+      top: 30px;
+      left: 0px;
+    }
+  }
+}
+
+
+
+//其他
+.coupon-msg{
+  display: block;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 15px;
+  margin-top: 20px;
+  background: #f5f5f5;
+  padding-left: 8px;
+  border:1px solid #c4c4c4;
+  color: #000000;
+}
+//右侧固定图片
+.coupon-right-app{
+      display: block;
+      width: 60px;
+      height: 68px;
+      background: url("../../images/coupon/right-app.png") no-repeat;
+      //position: fixed;
+      background-size: 40px;
+      padding-right: 20px;
+      vertical-align:middle;
+    }
+
+

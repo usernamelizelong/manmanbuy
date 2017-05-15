@@ -1,0 +1,93 @@
+body {
+  width: 100%;
+}
+.top_header {
+  background-color: #ff841d;
+  height: 44px;
+  width: 100%;
+}
+.top_header > h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 44px;
+}
+.top_header .back {
+  float: left;
+  width: 44px;
+  height: 42px;
+}
+.top_header .back > a {
+  width: 44px;
+  height: 44px;
+}
+/*商品部分*/
+.list {
+  padding: 10px ;
+}
+.list ul > li {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+.list ul > li > a > .pic {
+  float: left;
+}
+.list ul > li > a > .pic > img {
+  width: 100px;
+  height: 100px;
+}
+.list ul > li > a > .content {
+  width: 100%;
+  height: 100px;
+}
+.list a > .content > .title > .tit {
+  width: 100%;
+  padding-left: 20px;
+  font-size: 15px;
+}
+.list a > .content > .title > .description {
+  font-size: 15px;
+  color: #ff6c00;
+}
+.list .content .form {
+  /*padding-bottom:0px;*/
+}
+.list .content .form .mail {
+  position: absolute;
+  left: 130px;
+  bottom: 40px;
+  color: grey;
+}
+.list .content .form span > .icon-comment {
+  position: absolute;
+  font-size: 12px;
+  right: 50px;
+  bottom: 60px;
+}
+.list .line {
+  width: 100%;
+  border-bottom: 2px solid #9ea09f;
+  margin-top: 20px;
+}
+/*.page {
+  table{
+    tbody{
+      tr{
+        td{
+          background-color:red;
+          width:10px;
+          height:10px;
+          border-radius: 5px;
+          .mid{
+            width:100%;
+            height:100%;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}*/

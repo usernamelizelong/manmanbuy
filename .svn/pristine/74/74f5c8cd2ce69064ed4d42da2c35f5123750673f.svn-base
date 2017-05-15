@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买--品牌标题对应的十大品牌</title>
+    <?php include('../common/BStyle.html') ?>
+    <!-- 引用自己的样式-->
+    <link rel="stylesheet" href="../../css/brand/brandTitle-compare.css"/>
+</head>
+<body>
+<!--整体布局-->
+<div class="v_layout">
+    <!--头部块-->
+    <?php include('../../htmls/common/Bheader.html') ?>
+    <form action="">
+        <!--导航-->
+        <div class="v_nav">
+            <a href="/">首页</a><a href="brandTitle.html">> 品牌大全</a><a href="">> 平板电视哪个牌子好</a>
+        </div>
+        <!-- 哪个牌子好-->
+        <div class="v_good">
+            <div class="v_good_header">
+                <p>平板电视哪个牌子好</p>
+            </div>
+            <div class="v_good_list">
+            <!-- 品牌标题对应的十大品牌的渲染-->
+            </div>
+        </div>
+        <!-- 销量排行-->
+        <div class="v_sale">
+            <!-- 销量排行头部-->
+            <div class="v_sale_header">
+                <h3>
+                    <a href="#">平板电视产品销量</a>
+                </h3>
+            </div>
+            <!--销量排行列表 -->
+            <div class="v_sale_menu">
+            <!-- 产品销量排行的渲染-->
+            </div>
+        </div>
+        <!-- 最新评论-->
+        <div class="v_comment">
+          <div class="v_comment_header">
+              <h3>
+                  <a href="#">平板电视最新评论</a>
+              </h3>
+          </div>
+            <!-- 评论-->
+            <div class="v_comment_menu">
+                <!-- 销量排行商品的评论的渲染-->
+            </div>
+        </div></form>
+</div>
+<a class="gotop" id="gotop" href="javascript:;"></a>
+<div class="overlay">
+    <img class="_img" src="/imgs/brand/loading.gif">
+</div>
+<?php include('../../htmls/common/foot.html') ?>
+</body>
+<script>
+    setTimeout(function(){
+//        var overlay=document.querySelector(".overrlay");
+        $(".overlay").remove();
+        console.log(0);
+    },200)
+</script>
+<!-- 品牌标题对应的十大品牌的渲染-->
+<script type="text/html"id="brand_tpl">
+    {{each result as value i}}
+        <ul class="menu_ul">
+            <li>
+                <a href="javascript:;" data-id="{{value.brandId}}" id="brandId">
+                    <em>
+                        {{value.brandId+1}}
+                    </em>
+                    <div class="inner">
+                        <div>
+                            {{value.brandName}}
+                        </div>
+                        <p>
+                            {{value.brandInfo}}
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    {{/each}}
+</script>
+<!-- 产品销量排行的渲染-->
+<script type="text/html"id="brand_tpl2">
+   {{each result as value i}}
+   <ul class="v_ul" data-proid="{{value.productId}}">
+       <li>
+           <a href="#">
+               <div class="m_main">
+                   <div class="m_l">
+                       {{#value.productImg}}
+                   </div>
+                   <!-- 文字说明-->
+                   <div class="m_font">{{#value.productName}}</div>
+                   <!-- 价格-->
+                   <div class="m_price">
+                       <em>{{#value.productPrice}}</em>
+                                    <span class="star">
+                                        <em class="star4"></em>
+                                    </span>
+                   </div>
+                   <!-- 报价-->
+                   <div class="other">
+                       <em>{{value.productQuote}}</em>
+                       <em>{{value.productCom}}</em>
+                   </div>
+               </div>
+           </a>
+       </li>
+   </ul>
+    {{/each}}
+</script>
+<!-- 销量排行商品的评论的渲染-->
+<script type="text/html" id="brand_tpl3">
+    {{each result as value i}}
+        <ul>
+        <li class="clearfix">
+            <a href="#">
+                <div class="m_t">
+                    <div class="m_img">
+                        {{ #result.productImg }}
+                    </div>
+                    <div class="c_r">{{ result.productName }}</div>
+                </div>
+                <div class="m_b">
+                    <div class="m_x">
+                        {{value.comName}}
+                               <span class="star">
+                               <em class="star4"></em>
+                               </span>
+                        <div class="m_date">{{value.comTime}}</div>
+                    </div>
+                    <div class="c_send">
+                        {{value.comContent}}
+                    </div>
+                </div>
+            </a>
+        </li>
+        </ul>
+    {{/each}}
+</script>
+<?php include('../common/Bscript.html') ?>
+</html>

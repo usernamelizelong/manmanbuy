@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买-首页</title>
+
+
+
+    <?php include('./htmls/common/Bstyle.html')?>
+    <link rel="stylesheet" href="./css/common/Bheader.css"/>
+</head>
+<body>
+<!--主题部分-->
+<div class="mm_layout">
+    <!--主题头部部分-->
+    <?php include('./htmls/common/Bheader.html')?>
+    <!-- 搜索框部分-->
+    <?php include('./htmls/common/Bsearch.html')?>
+    <!-- 商品栏部分-->
+    <div class="mm_menu" id="memuData">
+        <div class="row">
+            <!--商品栏模板的坑-->
+
+        </div>
+    </div>
+
+    <!-- 折扣栏的标题-->
+    <div class="mm_discount_title">
+        <div class="discount_box">
+            <a href="/htmls/money/moneyctrl.html" class="">
+                <!-- 折扣栏标题左部-->
+                <h3 class="discount_title_left col-xs-6">超值折扣推荐</h3>
+                <span class="discount_title_right col-xs-6 iconfont"></span>
+            </a>
+        </div>
+    </div>
+    <!--主体每一个商品的部分-->
+    <div class="mm_product">
+        <div class="row">
+            <ul class="clearfix" id="getmoneyctrlData">
+                <!-- 首页折扣列表中的数据的坑-->
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- 更多优惠的信息-->
+    <div class="mm_discount">
+            <a href="/htmls/money/moneyctrl.html">更 多 的 优 惠 信 息 》</a>
+    </div>
+    <!-- 品牌排行-->
+    <div class="mm_brand_title">
+        <div class="brand_box">
+            <a href="#" class="">
+                <!-- 折扣栏标题左部-->
+                <h3 class="brand_title_left col-xs-6">品牌排行</h3>
+                <span class="brand_title_right col-xs-6 iconfont"></span>
+            </a>
+        </div>
+    </div>
+
+    <!--主题顶部部分-->
+    <?php include('./htmls/common/foot.html')?>
+
+    <!-- 右下角的下载软件图标-->
+    <div class="download_tab">
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">
+            <img src="./images/common/right-app.png" alt=""/>
+        </a>
+    </div>
+
+</div>
+
+
+
+<!--商品栏的模板-->
+<script type="text/html" id="menu-tpl">
+
+    {{ each result as value i }}
+        <div class="col-xs-3 ">
+            <a href="{{arrFoter[i]}}/{{value.titlehref}}">
+                {{ #value.img }}
+                <p>{{ value.name }}</p>
+            </a>
+        </div>
+    {{ /each }}
+</script>
+
+
+
+
+<!--首页折扣列表中的数据-->
+<script type="text/html" id="getmoneyctrl-tpl">
+    {{ each result as value i  }}
+    <li class="clearfix">
+        <a href="/htmls/?id={{ value.productId }}" class="clearfix">
+            {{ #value.productImgSm }}
+            <div class="mm_product-right">
+                <h3>{{ value.productName }} <span>{{ value.productPinkage }}</span></h3>
+                <div class="product-bottom">
+                    <p>{{ value.productFrom }} | {{ value.productTime }}</p>
+                    <div class="Message-prompt">
+                        <i class="icon-comment"></i><span>{{ value.productComCount }}</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+
+
+
+
+<?php include('./htmls/common/Bscript.html')?>
+
+</body>
+</html>

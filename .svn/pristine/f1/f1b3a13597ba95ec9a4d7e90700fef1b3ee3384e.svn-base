@@ -1,0 +1,36 @@
+body {
+  width: 100%;
+}
+.top_header {
+  width: 100%;
+  background-color: #ff841d;
+  height: 44px;
+}
+.top_header h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 44px;
+}
+.pro {
+  line-height: 40px;
+}
+.pro .pro_more .title {
+  padding-top: 20px;
+  font-size: 20px;
+}
+.pro .pro_more .form {
+  font-size: 14px;
+}
+.pro .pro_more .description {
+  line-height: 30px;
+  font-size: 20px;
+}
+.pro .pro_more .price {
+  font-size: 20px;
+}
+.pro .pro_more .conn .pic .pic_small {
+  width: 200px;
+  height: 200px;
+}

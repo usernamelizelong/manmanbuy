@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>白菜价</title>
+    <script src="../../js/baicaijia/zepto.min.js"></script>
+    <?php include('../common/BStyle.html') ?>
+    <!-- 第三方的样式-->
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.css"/>
+    <!--公共样式-->
+    <link rel="stylesheet" href="../../css/common/base.css"/>
+    <!--页面样式-->
+    <link rel="stylesheet" href="../../css/baicaijia/baicaijia.css"/>
+
+
+
+
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    <a href="/"  class='back f_left'></a>
+    白菜价-淘宝内部券
+    <div class="home">
+        <a href="#" onclick="trackEvent('header部下载');" class="icon-app"></a>
+    </div>
+</div>
+
+
+<!--搜索框内单击文本...-->
+<script>
+    function delInput() {
+        if ($.trim($('.formsch input').val()) != '') {
+            $('.formsch .a-delput').css('opacity', '1');
+        } else {
+            $('.formsch .a-delput').css('opacity', '0');
+        }
+    }
+</script>
+<!--标题列表-->
+<div class="bcj-head-cat">
+    <div class="tabs ui-navigator">
+        <ul class="ui-navigator-list">
+            <!--标题ul坑-->
+        </ul>
+    </div>
+    <div class="searchbtn">
+        <div class="icon-search">
+        </div>
+    </div>
+    <div class="searchbox">
+        <div class="formsch clearfix">
+            <form method="get" action="baicai.aspx">
+                <div class="txt" style="width: 80%">
+                    <input type="search" name="key" value="" onfocus="delInput();" oninput="delInput();"
+                           class="border-img" placeholder="搜索商品即可查内部券" >
+                    <a href="javascript:;" class="a-delput" ></a>
+                </div>
+                <div class="smt">
+                    <input type="submit" value="搜索" onclick="this.disabled=true"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--广告-->
+<div style="text-align: center; margin-top: 10px; margin-bottom: 10px; width: 100%;">
+    <img style="width: 100%;" src="http://misc.manmanbuy.com/images/quanpic/quan_banner_wap.png" alt="白菜价频道">
+</div>
+
+<!--商品-->
+<div id="container">
+    <div class="bcj-list">
+        <!--商品模板的坑-->
+    </div>
+</div>
+
+<!--缓冲-->
+<div class="Page_loading" style="display: block;">
+    <em>
+        <img src="../../imgs/baicaijia/loading.gif" width="32" height="32">
+    </em>
+    <span></span>
+</div>
+
+<!--返回顶部-->
+<a class="gotop" id="gotop" href="javascript:;" style="display: none;"></a>
+
+
+
+<!--底部登录与注册-->
+<?php include('../../htmls/common/foot.html') ?>
+
+
+</body>
+<!--标题模板-->
+<script type="text/html" id="bcj_tpl">
+    {{each result as value i}}
+    <li class="{{value.titleId==0?'active':''}}">
+        <a  href="javascript:" data-titleid="{{value.titleId}}">{{value.title}}
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!--商品列表模板-->
+<script type="text/html" id="pro_tpl">
+    <ul>
+        {{each result as value}}
+        <li class="ui-border-tb ">
+            <a biz-itemid="538754112089" class="gobuy" isconvert="1" href="http://s.click.taobao.com/lkqGHQx" target="_blank"></a>
+            <div class="pic"><i></i>
+                {{#value.productImg}}
+            </div>
+            <div class="inf">
+                <div class="i">
+                    <div class="t">{{#value.productName}}</div>
+                    <div class="pr">
+                        {{#value.productPrice}}
+                    </div>
+                </div>
+                <div class="o">
+                    <div class="b clearfix">
+                        <div class="q">
+                            {{#value.productCoupon}}
+                        </div>
+                        <div class="g">
+                            {{#value.productHref}}
+                        </div>
+                    </div>
+                    {{#value.productCouponRemain}}
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+
+
+<script src="../../js/baicaijia/swipe.js"></script>
+<?php include('../common/Bscript.html') ?>
+</html>

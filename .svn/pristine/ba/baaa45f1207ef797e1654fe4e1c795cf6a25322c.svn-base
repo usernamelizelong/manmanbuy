@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css"/>
+    <!--引用公共的样式-->
+    <link rel="stylesheet" href="../../css/money/base.css">
+    <!--引用自己的样式-->
+    <link rel="stylesheet" href="../../css/money/money.css">
+    <title></title>
+</head>
+<body>
+    <!-- 顶部 -->
+    <div class="top_header w">
+        <div class="back">
+            <a href="" class="icon-back">
+            </a>
+        </div>
+        <h2>省钱控 - 最新优惠</h2>
+        <div>
+            <a href="" class="icon-app"></a>
+        </div>
+    </div>
+    <!-- 商品显示部分 -->
+    <div class="list w">
+        <ul class="row" >
+            <!-- 插入模板 -->
+        </ul>
+    </div>
+   <table class="w">
+       <tbody>
+       <tr>
+           <td class="btnL" ><button>上一页</button></td>
+           <td class="sel" ><select></select></td>
+           <td class="btnR "><button>下一页</button></td>
+       </tr>
+       </tbody>
+   </table>
+    <?php include('../common/foot.html')?>
+
+
+    <!-- 商品模板 -->
+    <script type="text/html" id="mentTpl">
+    {{ each result}}
+            <li>
+                <a>
+                    <div class="pic">
+                        <!-- 放图片 -->
+                        {{ #$value.productImgSm }}
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <span class="tit">{{ $value.productName }}</span>
+                            <span class="description"> {{ $value.productPinkage }}</span>
+                        </div>
+                        <div class="form">
+                            <span class="mail">{{ $value.productFrom }}</span>
+                            <span><i class="icon-comment iconfont fr">&#xe612;</i><i class="number"></i></span>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </a>
+            </li>
+    {{ /each }}
+    </script>
+
+    <!--引用jq-->
+    <script src="../../lib/jquery/jquery.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--引用template-->
+    <script src="../../lib/artTemplate-3.0.1/template.js"></script>
+
+    <!--引用自己的js-->
+    <script src="../../js/money/money.js"></script>
+    <!-- 或者直接把这个直接引入进去 -->
+</body>
+</html>

@@ -1,0 +1,9 @@
+define(['jquery'], function ($) {
+
+    //单击关闭按钮让广告栏隐藏
+    $('.close_box').on('click', function () {
+        $('.banner_down').fadeOut();
+    })
+
+
+})

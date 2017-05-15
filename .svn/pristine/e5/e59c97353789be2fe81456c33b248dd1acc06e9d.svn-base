@@ -1,0 +1,119 @@
+.discount-goods_details {
+  width: 100%;
+  height: 100%;
+}
+.discount-goods_details > .discount-header {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background: #ff841d;
+}
+.discount-goods_details > .discount-header > .discount-back,
+.discount-goods_details > .discount-header .discount-menu {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 44px;
+}
+.discount-goods_details > .discount-header > .discount-back {
+  left: 15px;
+  color: white;
+  top: 10px;
+}
+.discount-goods_details > .discount-header > .discount-menu {
+  display: block;
+  width: 50px;
+  height: 44px;
+  right: 8px;
+  background-image: url("../../imgs/home/header_app.png");
+  background-repeat: no-repeat;
+  background-size: 40px 35px;
+  top: 5px;
+}
+.discount-goods_details > .discount-header > h1 {
+  line-height: 44px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  font-family: Microsoft YaHei;
+}
+.discount-goods_details > div #aspanetForm {
+  width: 100%;
+}
+.discount-goods_details > div #aspanetForm > .container {
+  width: 100%;
+  max-width: 960px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content {
+  padding: 4px 10px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > h3 {
+  margin: 10px auto 5px auto;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Microsoft YaHei;
+  color: #333;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > h4 {
+  margin: 10px auto 5px auto;
+  font-size: 16px;
+  color: #ff6c00;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > .info span {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Microsoft YaHei;
+  color: #999;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > .content > .picwrap {
+  width: 120px;
+  float: right;
+  background: pink;
+  margin: 12px auto auto 10px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > .content > .conn {
+  font-size: 16px;
+  line-height: 24px;
+  color: #606060;
+  padding-bottom: 20px;
+  word-break: break-all;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > .golink {
+  height: 40px;
+  line-height: 40px ;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .col > .golink > a {
+  display: block;
+  height: 40px;
+  background: #ff9900;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  margin: 20px 10px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .img {
+  text-align: center;
+  margin: 20px 10px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .img img {
+  width: 100%;
+  height: auto;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .comment > .tit {
+  font-size: 16px;
+  padding: 6px 8px;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .comment > .reply {
+  width: 100%;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .comment > .reply > .form {
+  width: 100%;
+}
+.discount-goods_details > div #aspanetForm > .container > .cu-content > .comment > .reply > .form > #ctl00_ContentBody_txt_nr {
+  width: 80%;
+  rows: 6;
+}

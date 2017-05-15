@@ -1,0 +1,29 @@
+body{
+  width:100%;
+}
+.top_header {
+  width: 100%;
+  background-color: #ff841d;
+  height: 44px;
+  .tit{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 44px;
+  }
+}
+.title{
+  margin-top:10px;
+  .titleB{
+    font-size:15px;
+    font-weight: bold;
+  }
+}
+.proShow{
+  img{
+    display:block;
+    margin:0 auto;
+  }
+}

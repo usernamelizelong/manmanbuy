@@ -1,0 +1,71 @@
+{
+  "result": [
+    {
+
+      "brandId": 100,
+      "brandName": "格力",
+      "categoryId": 1
+    },
+    {
+
+      "brandId": 100,
+      "brandName": "美的",
+      "categoryId": 1
+    },
+    {
+      "brandId": 100,
+      "brandName": "奥克斯",
+      "categoryId": 1
+    },
+    {
+      "brandId": 100,
+      "brandName": "海尔",
+      "categoryId": 1
+    },
+    {
+      "brandId": 100,
+      "brandName": "格兰仕",
+      "categoryId": 1
+    },
+
+    {
+      "brandId": 100,
+      "brandName": "海信",
+      "categoryId": 1
+    },
+    {
+      "brandId": 100,
+      "brandName": "科龙",
+      "categoryId": 1
+    },
+    {
+      "brandId": 100,
+      "brandName": "志高",
+      "categoryId": 1
+    },
+    {
+      "brandId": 100,
+      "brandName": "长虹",
+      "categoryId": 1
+    },
+    {
+      "brandId": 100,
+      "brandName": "月兔",
+      "categoryId": 1
+    },
+    {
+      "brandId": 100,
+      "brandName": "杨子",
+      "categoryId": 1
+    },
+    {
+      "brandId": 100,
+      "brandName": "长虹",
+      "categoryId": 1
+    }
+
+
+
+
+  ]
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css"/>
+    <!--引用公共的样式-->
+    <link rel="stylesheet" href="../../css/money/base.css">
+    <!--引用自己的样式-->
+    <link rel="stylesheet" href="../../css/money/money.css">
+    <!-- 底部css样式 -->
+    <link rel="stylesheet" href="../../css/money/font.css">
+    <link rel="stylesheet" href="../../css/common/foot.css">
+    <title>省钱控 - 最新优惠</title>
+    <!--php include('../common/Bstyle.html')-->
+
+</head>
+<body>
+<div class="container" style="width:100%">
+    <div class="row">
+        <!-- 顶部 -->
+        <div class="top_header w row">
+            <div class="back">
+                <a href="" class="icon-back">
+                </a>
+            </div>
+            <h2>省钱控 - 最新优惠</h2>
+            <div>
+                <a href="" class="icon-app"></a>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <!-- 商品显示部分 -->
+            <div class="list">
+                <ul class="row" >
+                    <!-- 插入模板 -->
+                </ul>
+            </div>
+        </div>
+        <!-- 按钮 -->
+        <div class="page" style="text-align: center;">
+            <table width="100%">
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="###" id="prePage">上一页</a>
+                    </td>
+                    <td>
+                        <select id="selectPage">
+                        </select>
+                    </td>
+                    <td>
+                        <a href="###" id="nextPage">下一页</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="">
+    <?php include('../common/foot.html')?>
+</div>
+<!--底部登录与注册-->
+
+
+<!-- 备份，不是模板 -->
+<script type="text/html">
+    <!-- 顶部 -->
+    <div class="top_header w row">
+        <div class="back">
+            <a href="" class="icon-back">
+            </a>
+        </div>
+        <h2>省钱控 - 最新优惠</h2>
+        <div>
+            <a href="" class="icon-app"></a>
+        </div>
+    </div>
+    <!-- 商品显示部分 -->
+    <div class="list w container">
+        <ul class="row" >
+            <!-- 插入模板 -->
+        </ul>
+    </div>
+    <!--<div class="page">
+        <table class="w">
+            <tbody>
+            <tr>
+                <td class="btnL" ><button id="btnL">上一页</button></td>
+                <td class="sel" ><select id="page" style="color:black">
+
+                </select></td>
+                <td class="btnR "><button id="btnR">下一页</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>-->
+
+
+</script>
+
+
+<!-- 商品模板 -->
+<script type="text/html" id="mentTpl">
+    {{ each result}}
+    <li class="">
+        <a>
+            <div class="pic fl">
+                <!-- 放图片 -->
+                {{ #$value.productImgSm }}
+            </div>
+            <div class="content">
+                <div class="title">
+                    <p class="tit">{{ $value.productName }}</p>
+                    <span class="description"> {{ $value.productPinkage }}</span>
+                </div>
+                <div class="form">
+                    <span class="mail">{{ $value.productFrom }} | {{ $value.productTime }}</span>
+                    <span><i class="icon-comment iconfont fr">&#xe612;<i class="number"> {{ $value.productComCount }}</i></i></span>
+                </div>
+            </div>
+            <div class="line"></div>
+        </a>
+    </li>
+    {{ /each }}
+</script>
+
+
+<!--引用jq-->
+<!--<script src="../../lib/jquery/jquery.js"></script>
+<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>-->
+
+<!--引用template-->
+<!--<script src="../../lib/artTemplate-3.0.1/template.js"></script>-->
+
+<!--引用自己的js-->
+<!--<script src="../../js/money/money.js"></script>
+<script src="../../js/common/util.js"></script>
+<script src="../../js/common/common.js"></script>
+<script src="../../js/common/main.js"></script>-->
+
+<?php include('../common/script.html')?>
+</body>
+</html>

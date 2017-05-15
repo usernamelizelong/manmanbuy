@@ -1,0 +1,298 @@
+/*����ͼ��*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../lib/font_960y6yj4lwyiudi/iconfont.eot');
+  src: url('../../lib/font_960y6yj4lwyiudi/iconfont.eot?#iefix') format('embedded-opentype'), url('../../lib/font_960y6yj4lwyiudi/iconfont.woff') format('woff'), url('../../lib/font_960y6yj4lwyiudi/iconfont.ttf') format('truetype'), url('../../lib/font_960y6yj4lwyiudi/iconfont.svg#iconfont') format('svg');
+}
+/*��������ͼ����ʽ*/
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: 'more';
+  src: url('../../lib/font_2jpebxxoy6lp7gb9/iconfont.eot');
+  src: url('../../lib/font_2jpebxxoy6lp7gb9/iconfont.eot?#iefix') format('embedded-opentype'), url('../../lib/font_2jpebxxoy6lp7gb9/iconfont.woff') format('woff'), url('../../lib/font_2jpebxxoy6lp7gb9/iconfont.ttf') format('truetype'), url('../../lib/font_2jpebxxoy6lp7gb9/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.more {
+  font-family: "more" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+li {
+  list-style: none;
+}
+.coupon-header {
+  height: 70px;
+  width: 100%;
+  position: relative;
+  background: #f4483e;
+  margin-bottom: 20px;
+}
+.coupon-header .coupon-header-back {
+  float: left;
+  width: 50px;
+  text-align: center;
+  padding-left: 10px;
+}
+.coupon-header .coupon-header-back .iconfont {
+  color: #fff;
+  width: 100%;
+  line-height: 70px;
+  margin: 0 auto;
+  left: 10px;
+  background: no-repeat center;
+  position: relative;
+  font-size: 40px;
+}
+.coupon-header .coupon-header-back .iconfont ::before {
+  content: "";
+  font-size: 17px;
+  font-family: iconfont;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.coupon-header h1 {
+  width: 122px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+}
+.coupon-header .coupon-header-downLoad {
+  float: right;
+  width: 50px;
+  text-align: center;
+  padding-left: 10px;
+}
+.coupon-header .coupon-header-downLoad .coupon-header_app {
+  display: block;
+  top: -68px;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  right: 20px;
+  background: url("../../images/header_app.png") no-repeat center;
+  position: relative;
+  background-size: 40px;
+}
+.coupon-main {
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+.coupon-main .coupon-main-l .couponproduct-link li {
+  border-bottom: 1px solid #c4c4c4;
+  margin-top: 20px;
+  position: relative;
+}
+.coupon-main .coupon-main-l .couponproduct-link li .more {
+  content: "";
+  color: #c4c4c4;
+  font-weight: 700;
+  font-size: 20px;
+  position: absolute;
+  top: 14px;
+  right: 33px;
+  font-family: "more";
+}
+.coupon-main .coupon-main-l .couponproduct-link li a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  max-width: 960px;
+  min-width: 360px;
+}
+.coupon-main .coupon-main-l .couponproduct-link li a .coupon-main-pic {
+  width: 120px;
+  height: 100px;
+  overflow: hidden;
+  margin-left: 30px;
+}
+.coupon-main .coupon-main-l .couponproduct-link li a .coupon-main-pic img {
+  max-width: 100px;
+}
+.coupon-main .coupon-main-l .couponproduct-link li a .coupon-main-info {
+  padding-left: 10px;
+}
+.coupon-main .coupon-main-l .couponproduct-link li a .coupon-main-info .coupon-info-tit {
+  font-weight: normal;
+  color: #333333;
+  overflow: hidden;
+}
+.coupon-main .coupon-main-l .couponproduct-link li a .coupon-main-info .coupon-info-tit h3 {
+  line-height: 20px;
+  font-size: 14px;
+  text-align: justify;
+  font-weight: normal;
+  border: 1px solid #ccc;
+  word-break: break-all;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: none;
+}
+.coupon-main .coupon-main-l .couponproduct-link li a .coupon-main-info .coupon-info-tit h2 {
+  line-height: 15px;
+  font-size: 15px;
+}
+.coupon-main .coupon-main-l .couponproduct-link li a .coupon-main-info .coupon-info-data {
+  color: #ee7700;
+  margin-top: 10px;
+}
+.coupon-msg {
+  display: block;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 15px;
+  margin-top: 20px;
+  background: #f5f5f5;
+  padding-left: 8px;
+  border: 1px solid #c4c 4c4;
+  color: #000000;
+}
+.coupon-right-app {
+  display: block;
+  width: 60px;
+  height: 68px;
+  background: url("../../images/coupon/right-app.png") no-repeat;
+  background-size: 40px;
+  padding-right: 20px;
+  vertical-align: middle;
+}
+#galleryOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  transition: opacity 1s ease;
+}
+#galleryOverlay .visible {
+  opacity: 1;
+}
+#galleryOverlay #gallerySlider {
+  position: relative;
+}
+#galleryOverlay #gallerySlider .placeholder {
+  height: 165px;
+  text-align: center;
+  width: 200px;
+  overflow: hidden;
+  position: absolute;
+  top: 210px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#galleryOverlay #gallerySlider .placeholder ::before {
+  content: '';
+  display: inline-block;
+  height: 50%;
+  width: 1px;
+  margin-right: -1px;
+}
+#galleryOverlay #gallerySlider .placeholder img {
+  z-index: 10;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+#galleryOverlay #gallerySlider .rightSpring {
+  animation: rightSpring 0.3s;
+}
+#galleryOverlay #gallerySlider .leftSpring {
+  animation: rightSpring 0.3s;
+}
+#galleryOverlay #prevArrow,
+#galleryOverlay #nextArrow {
+  border: none;
+  text-decoration: none;
+  background: url("../../images/coupon/arrows.png") no-repeat;
+  opacity: .5;
+  cursor: pointer;
+  position: absolute;
+  width: 43px;
+  height: 58px;
+  top: 50%;
+  margin-top: -29px;
+  transition: opacity .2s ease;
+}
+#galleryOverlay #prevArrow:hover,
+#galleryOverlay #nextArrow:hover {
+  opacity: 1;
+}
+#galleryOverlay #prevArrow {
+  background-position: left top;
+  left: 40px;
+}
+#galleryOverlay #nextArrow {
+  background-position: right top;
+  right: 40px;
+}
+@keyframes rightSpring {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: -30px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+@keyframes leftSpring {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: -30px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+#pageflip {
+  right: 0px;
+  float: right;
+  position: relative;
+  top: 0px;
+}
+#pageflip img {
+  z-index: 99;
+  right: 0px;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  height: 52px;
+  ms-interpolation-mode: bicubic;
+}
+#pageflip .msg_block {
+  right: 0px;
+  width: 50px;
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  height: 50px;
+}

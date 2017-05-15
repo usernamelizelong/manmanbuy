@@ -1,0 +1,49 @@
+.b_layout {
+  width: 100%;
+  height: 100%;
+}
+.b_layout .b_nav {
+  width: 100%;
+  height: 40px;
+  background-color: #F5F5F5;
+  border-top: 2px solid #EBEBEB;
+  border-bottom: 1px solid #CCCCCC;
+}
+.b_layout .b_nav > a:first-of-type {
+  padding: 0 2px 0 5px;
+  line-height: 40px;
+}
+.b_layout .b_nav > a:last-of-type {
+  padding-left: 4px;
+}
+.b_layout .b_rank {
+  background-color: #F2F2F2;
+}
+.b_layout .b_rank > .b_rank_header {
+  height: 40px;
+  background-color: #EEEEEE;
+  margin: 10px 4px 8px 4px;
+  border: 1px solid #CCCCCC;
+}
+.b_layout .b_rank > .b_rank_header > p {
+  line-height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  color: #874604;
+}
+.b_layout .b_rank > .menu {
+  margin-top: 13px;
+}
+.b_layout .b_rank > .menu > div {
+  border-bottom: 1px solid #CCCCCC;
+  height: 42px;
+  margin: 0 10px 0 10px;
+}
+.b_layout .b_rank > .menu > div > a {
+  display: block;
+  height: 42px;
+  line-height: 42px;
+  font-size: 16px;
+  color: #000000;
+  background: url("http://www.zuyushop.com/wap/images/arrow1.gif") right center no-repeat;
+}

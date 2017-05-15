@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>国内折扣</title>
+
+    <?php include('../common/Bstyle.html')?>
+</head>
+<body>
+<!--头部导航栏-->
+<div class="discount">
+    <!--跳转箭头 returnKey（返回键）-->
+    <div class="discount-header">
+        <a href="" class="discount-back iconfont icon-back"></a>
+        <h1>国内折扣</h1>
+        <a href="" class="discount-menu"></a>
+    </div>
+    <!-- 商品介绍-->
+    <div class="container">
+        <div class="row">
+            <!-- 接口坑-->
+        </div>
+
+    </div>
+    <div class="download_tab">
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">
+            <img src="../../images/common/right-app.png" alt=""/>
+        </a>
+    </div>
+
+</div>
+
+</div>
+<script id="commodity-tpl" type="text/html">
+    {{each list}}
+    <div class="col-md-6 col-sm-6 col-xs-6 border-img clearfix">
+        <!-- 接口-->
+        <a href="discount-goods_details.html?productId={{$value.productId}}" id="productid" class="pro">
+            <div class="img">
+                {{#$value.productImg}}
+            </div>
+
+            <p class="productName">{{$value.productName}}</p>
+            <p class="productPrice">{{$value.productPrice}}</p>
+            <span class="productFrom">{{$value.productFrom}}</span>
+            <span class="productTime">{{$value.productTime}}</span>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<?php include('../common/foot.html')?>
+<?php include('../common/Bscript.html')  ?>
+
+</body>
+</html>

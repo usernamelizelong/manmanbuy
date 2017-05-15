@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css"/>
+    <!--引用公共的样式-->
+    <link rel="stylesheet" href="../../css/money/base.css">
+    <!--引用自己的样式-->
+    <link rel="stylesheet" href="../../css/money/money_product.css">
+    <title></title>
+</head>
+<body>
+    <div class="" style="width:100%"></div>
+    <div class="" style="height:200px;">
+        <div class=" "></div>
+        <div class=" ">
+            <!-- 顶部 -->
+            <div class="top_header">
+                <div class="back">
+                    <a href="" class="icon-back">
+                    </a>
+                </div>
+                <h2 class="tit">国内折扣</h2>
+                <div>
+                    <a href="" class="icon-app"></a>
+                </div>
+            </div>
+            <!-- 商品详情 -->
+            <div class=" title">
+                <h3 class="titleB">移动端凑单品：海天 鲜味 生抽 1.28L</h3>
+                <div class="form" >京东商城</div>
+            </div>
+            <div class="col-md-12">
+                <div class="fr">
+                    <img src="../../images/money/http__a.manmanbuy.com8013_cuxiaoPic_20173_2017030015114547502.jpg" class="pic_small fr" style="width:100px;height:100px;"/>
+                </div>
+                <div>
+                    <p class="description" >海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。</p>
+                </div>
+            </div>
+        </div>
+        <div class=" "></div>
+    </div>
+    <div class="proShow">
+        <img src="../../images/money/http__a.manmanbuy.com8013_cuxiaoPic_20173_2017030015114547502.jpg" class=""/>
+    </div>
+    <div class="purchase container" style="position: fixed;bottom: 0;width:100%;height:40px;">
+        <div class="row">
+            <div class="col-xs-4" style="background-color:#b9b9b9;height:40px;"></div>
+            <div class="col-xs-8" style="background-color: #ff841d;height:40px;text-align:center;line-height:40px;font-weight: bold;color:#fff">前 往 购 买</div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 备份，不是模板 -->
+    <script type="text/html" >
+
+        <div class="col-md-12 top_header">
+            <div class="back">
+                <a href="" class="icon-back">
+                </a>
+            </div>
+            <h2 class="w">国内折扣</h2>
+            <div>
+                <a href="" class="icon-app"></a>
+            </div>
+        </div>
+        <!-- 商品显示部分 -->
+        <div class="pro w">
+            <div class="pro_more">
+                <h3 class="title">移动端凑单品：海天 鲜味 生抽 1.28L</h3>
+                <div class="form" >京东商城</div>
+                <div class="conn">
+                    <div class="pic">
+                        <img src="../../images/money/http__a.manmanbuy.com8013_cuxiaoPic_20173_2017030015114547502.jpg" class="pic_small fr"/>
+                    </div>
+                    <div>
+                        <p class="description" >海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。</p>
+                        <br>
+                        <p class="price">目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-12" style="text-align: center;">
+                    <img src="../../images/money/http__a.manmanbuy.com8013_cuxiaoPic_20173_2017030015114547502.jpg" class="pic_big"/>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <?php include('../common/foot.html')?>
+        </div>
+    </script>
+
+    <!-- 商品模板 -->
+    <script type="text/html" id="mentTpl">
+
+    </script>
+
+    <!--引用jq-->
+    <script src="../../lib/jquery/jquery.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--引用template-->
+    <script src="../../lib/artTemplate-3.0.1/template.js"></script>
+
+    <!--引用自己的js-->
+    <script src="../../js/money/money_product.js"></script>
+</body>
+</html>

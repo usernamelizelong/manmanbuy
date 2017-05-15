@@ -1,0 +1,43 @@
+/**
+ * Created by hywz on 2017/3/7.
+ */
+
+
+
+/**
+ * Created by ��� on 2017/3/6.
+ */
+define(['jquery','template'],function($,template){
+    $.get('http://139.199.157.195:9090/api/getinlanddiscount',function(data){
+        var html=template('commodity-tpl',{list:data.result});
+        $('.row').html(html);
+
+    });
+});
+var discount=$(".discount");
+//var dorderImg=$(".border-img");
+
+//if($(".list").hasClass("loading")){
+//    return;
+//}
+$(window).on("scroll",function(){
+    var itemOffsetTop=$(".discount").offset().top;
+    var itemsHeight=$(".discount").height();
+    var windowOffsetTop=$(window).scrollTop();
+    var windowHeight=$(window).height();
+    /*判断加载时机*/
+    if((itemOffsetTop+itemsHeight)-(windowOffsetTop+windowHeight) < 100){
+        /*加载更多数据*/
+        var page=$(".list").attr("list");
+        page++;
+        return page
+    }
+
+
+});
+
+
+
+
+
+

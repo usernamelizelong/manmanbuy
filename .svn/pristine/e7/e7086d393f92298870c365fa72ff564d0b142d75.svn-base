@@ -1,0 +1,159 @@
+define(['jquery','template','lazy'],function ($,template,undefined) {
+
+    $(function () {
+        toggle();
+        getgsshop();
+        getgsshoparea();
+        price();
+        classify();
+        getgsproduct();
+
+
+
+        /*给模版添加方法*/
+        template.helper('getQueryString',getQueryString);
+        template.helper('get$',get$);
+
+
+
+        /*点击菜单切换地区*/
+        function toggle() {
+            $('#store').on('click','>li:nth-child(1)',function () {
+                $('#store >li:eq(0)').toggleClass('active').siblings().removeClass('active');
+                $('.option-f >ul:nth-child(1)').toggle().siblings().hide();
+                $('.option-n >div').removeClass('active');
+            }).on('click','>li:nth-child(2)',function () {
+                $('#store >li:eq(1)').toggleClass('active').siblings().removeClass('active');
+                $('.option-f >ul:nth-child(2)').toggle().siblings().hide();
+                $('.option-n >div').removeClass('active');
+            }).on('click','>li:nth-child(3)',function () {
+                $('#store >li:eq(2)').toggleClass('active').siblings().removeClass('active');
+                $('.option-f >ul:nth-child(3)').toggle().siblings().hide();
+                $('.option-n >div').removeClass('active');
+            });
+        }
+
+
+
+        /*地区显示对应店铺*/
+        function getgsshop() {
+            $.get('http://139.199.157.195:9090/api/getgsshop',function (data) {
+                var html = template('region-tpl',data);
+                $('#region').html(html);
+                if (sessionStorage.getItem('region')){
+                    $('#store >li:eq(0) a').html(sessionStorage.getItem('region')+"<i></i>");
+                }
+                $('#region').on('click','li',function () {
+                    sessionStorage.removeItem('region');
+                    sessionStorage.setItem('region',$(this).text());
+                })
+            });
+        }
+
+
+        /*地区显示相关区域*/
+        function getgsshoparea() {
+            $.get('http://139.199.157.195:9090/api/getgsshoparea',function (data) {
+                var html = template('area-tpl',data);
+                $('#area').html(html);
+                if (sessionStorage.getItem('area')){
+                    $('#store >li:eq(1) a').html(sessionStorage.getItem('area')+"<i></i>");
+                }
+                $('#area').on('click','li',function () {
+                    sessionStorage.removeItem('area');
+                    sessionStorage.setItem('area',$(this).text().substring(0,2));
+                })
+            });
+        }
+
+
+
+
+        /*一元显示更多价格*/
+        function price() {
+            $.get('./price.json',function (data) {
+                var html = template('price-tpl',data);
+                $('#price').html(html);
+                if (sessionStorage.getItem('price')){
+                    $('#store >li:eq(2) a').html(sessionStorage.getItem('price')+"<i></i>");
+                }
+                $('#price').on('click','li',function () {
+                    sessionStorage.removeItem('price');
+                    sessionStorage.setItem('price',$(this).text());
+                })
+            });
+        }
+
+        /*选择分类*/
+        function classify() {
+            $('.option-n >div').on('click',function () {
+                $('.choice-box').toggle().siblings().hide();
+                $('#store >li').removeClass('active');
+                $(this).toggleClass('active');
+            })
+
+            $('.sort>dl>dd').on('click',function () {
+                $(this).addClass('active').siblings().removeClass('active')
+            })
+            $('.classify>dl>dd').on('click',function () {
+                $(this).addClass('active').siblings().removeClass('active')
+            })
+        }
+
+        /*获取商品列表*/
+        function getgsproduct() {
+            // var areaId = getQueryString("areaId");
+            // var areaId = getQueryString("shopId");
+            $.get('http://139.199.157.195:9090/api/getgsproduct',
+                {shopid:getQueryString("shopId")?getQueryString("shopId"):0,
+                    areaid:getQueryString("areaId")?getQueryString("areaId"):0}
+                ,function (data) {
+                    var html = template('gsproduct-tpl',data);
+                    $('#gsproduct').html(html);
+                    $("img.lazy").lazyload();
+                });
+        }
+
+
+
+
+
+
+
+
+
+
+        /*提取价格中的数字*/
+        function get$(key) {
+            return key.match(/\d+[.]\d+/)[0];
+        }
+
+
+
+        /*获取页面url参数*/
+        function getQueryString (key) {
+
+            // 去掉字符串首字母?号
+            var search = location.search.slice(1);
+
+            // 使用&符号得到每一个key=val
+            var searchArr = search.split('&');
+            var tempArr = null;
+            var searchObj = {};
+
+            // 遍历数组中的每一个key=val字符串，使用=号劈开，
+            // 然后以key为名，val为值添加到searchObj对象中。
+            for( var i =0, len = searchArr.length; i < len; i++) {
+                tempArr = searchArr[i].split('=');
+                searchObj[ tempArr[0] ] = tempArr[1];
+            }
+
+            // 有参数返回指定值，没有参数返回全部值
+            return arguments.length? searchObj[key]: searchObj;
+            //return searchObj;
+        }
+
+    })
+})
+
+

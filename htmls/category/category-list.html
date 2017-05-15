@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买-比价搜索-分类</title>
+
+    <?php include('../common/Bstyle.html')?>
+
+</head>
+<body>
+
+ <!--头部部分-->
+<?php include('../common/Bheader.html')?>
+<div id="header01"></div>
+<!--搜索栏-->
+ <?php include('../common/Bsearch.html')?>
+
+
+ <!--产品分类-比价列表-->
+ <div class="brief">
+
+
+ </div>
+
+
+ <script type='text' id='brieflist'>
+        {{ each list as category i }}
+        <div class="briefin " data-id='{{ category.titleId }}' style="background: #ebebeb">
+            <div class="fl_t" >
+                <a href="javascript:;">{{ category.title }}</a>
+                </div>
+                 <div class="fl_all clearfix">
+
+             </div>
+        </div>
+        {{ /each }}
+    </script>
+ <script type='text' id='table_tpl'>
+    {{ each List as value i }}
+     <div class='divs'  >
+        <a href="javascript:;" data-id="{{value.categoryId}}" id="table-tr" class='col-xs-4 col-sm-4 col-md-4  col-lg-4 '>{{ value.category }}</a>
+     </div>
+   {{ /each }}
+
+</script>
+
+
+
+
+
+
+ <?php include('../common/foot.html')?>
+
+<?php include('../common/Bscript.html')  ?>
+</body>
+</html>

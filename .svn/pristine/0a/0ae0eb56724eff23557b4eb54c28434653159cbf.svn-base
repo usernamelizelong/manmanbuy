@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/css/common/base.css"/>
+<link rel="stylesheet" href="/css/discount/discount.css"/>
+<!--<link rel="stylesheet" href="/css/discount/htmls/size/font/demo.css"/>-->
+<link rel="stylesheet" href="/size/font/demo.css">
+<link rel="stylesheet" href="/size/font/iconfont.css"/>
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../../css/common/base.css"/>
+<link rel="stylesheet" href="../../css/discount/discount.css"/>
+<link rel="stylesheet" href="../../size/font/demo.css"/>
+<link rel="stylesheet" href="../../size/font/iconfont.css"/>
+<link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>

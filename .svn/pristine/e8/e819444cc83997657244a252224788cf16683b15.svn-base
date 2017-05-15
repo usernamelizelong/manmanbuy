@@ -1,0 +1,70 @@
+/**
+ * Created by hywz on 2017/3/8.
+ */
+//
+define(['jquery','util','template' ],function($,util,template){
+    var cententData=util.getQueryString("productId");
+    console.log(cententData);
+
+    $.get('http://139.199.157.195:9090/api/getdiscountproduct',{  productid:cententData},function(data){
+
+        var html=template('discount-goods_details',{list:data.result});
+
+        $('.container').html(html);
+
+    });
+
+
+
+});
+
+//$(function () {
+//    //得是先把这个值拿到,再发给init()
+//    var productId=getQueryString("productid");
+//    //方法的调用(初始化)
+//    init();
+//    //方法的定义
+//    function init(){
+//        getShop(productId);
+//    }
+////~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//    function getShop(productId){
+//        $.ajax({
+//            url:"http://139.199.157.195:9090/api/getdiscountproduct",
+//            type:"get",
+//            data:{
+//                "productid":productId
+//            },
+//            success: function (data) {
+//                var html=template("gnzk-shop-tpl",data);
+//                $("#gnzk-shop-menu").html(html);
+//            }
+//        })
+//    }
+//    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//    function getQueryString(key){
+////    封装一个获取到指定查询字符串的它的参数值(属性值)的方法
+////    本来应该是define([],functon{}) 在里面写入这个封装函数的,但是因为只有有个函数,所以干脆用这个封装函数代替了那个function
+////    条件1:不传参.就返回所有的查询字符串所构成的对象
+////    条件2:传参,就返回对应参数的值
+////    我们需要先把字符串拿到,再一层一层的截取成数组,最后还要弄成对象,这样才能通过.的形式拿到属性值
+//
+//        //   1:先去掉字符串中的首字母 ?
+//        var search=location.search.slice(1)/*参数只有一个表示从它开始一直取到最后一个*/
+//        //   2:再把每个属性之间的&去掉,原来是{name=lifei&key=val}
+//        //    split  把字符串分割成数组,括号里第一个参数表示从哪里开始切割
+//        var searchArr=search.split("&");
+//        var tempArr=null;
+//        var searchObj={};
+//        //   3:遍历每一个数组,现在成了[name=lifei,key=val]
+//        for(var i=0;i<searchArr.length;i++){
+//            tempArr=searchArr[i].split("=");
+//            //现在成了[name,lifei]  [key,val]
+//            searchObj[tempArr[0]]=tempArr[1];
+//        }
+//        //    有参数,就返回对应的参数值,没有就返回全部
+//        return arguments.length?searchObj[key]:searchObj;
+//    }
+//});
+
+

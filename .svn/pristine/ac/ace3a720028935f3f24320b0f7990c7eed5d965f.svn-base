@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <?php include('../common/Bstyle.html')?>
+</head>
+<body>
+<!--头部-->
+<header class="gsshop-header">
+    <div>
+        <a href="/" class="">&lt;</a>
+    </div>
+    <h1>凑单品</h1>
+    <div></div>
+</header>
+
+<!--地区选项-->
+<section class="gsshop-section">
+    <div class="option-n">
+        <ul id="store" class="clearfix">
+            <li><a href="javasrcipt:;">京东<i class=""></i></a></li>
+            <li><a href="javasrcipt:;">华北<i class=""></i></a></li>
+            <li><a href="javasrcipt:;">一元<i class=""></i></a></li>
+        </ul>
+        <div class=""><i></i></div>
+    </div>
+    <div class="option-f">
+        <ul id="region">
+            <!--店铺的坑-->
+        </ul>
+        <ul id="area">
+            <!--区域的坑-->
+        </ul>
+        <ul id="price">
+            <!--价格的坑-->
+        </ul>
+        <div class="choice-box">
+            <div class="search">
+                <i></i>
+                <input type="text" placeholder="搜索您想要的凑单品">
+                <input type="button" value="搜索">
+            </div>
+            <p>排序</p>
+            <div class="sort">
+                <dl class="clearfix">
+                    <dd class="active">销量</dd>
+                    <dd>价格&uarr;</dd>
+                    <dd>价格&darr;</dd>
+                </dl>
+            </div>
+            <p>分类</p>
+            <div class="classify">
+                <dl class="clearfix">
+                    <dd class="active">全部</dd>
+                    <dd>家居</dd>
+                    <dd>数码</dd>
+                    <dd>办公</dd>
+                    <dd>个护</dd>
+                    <dd>食品</dd>
+                    <dd>母婴</dd>
+                    <dd>服饰</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="gsshop-commodity">
+    <ul class="clearfix" id="gsproduct">
+        <!--图片的坑-->
+    </ul>
+</div>
+
+<!--底部登录与注册-->
+<?php include('../common/foot.html')?>
+
+
+
+
+
+
+
+
+    <!--模版-->
+    <!--店铺名称-->
+    <script type="text/tpl" id="region-tpl">
+            {{ each result}}
+            <li><a href="./gsproduct.html?shopId={{ $value.shopId }}&areaId={{ getQueryString("areaId")==""?0:getQueryString("areaId") }}">{{ $value.shopName }}</a></li>
+            {{ /each }}
+    </script>
+    <!--地区-->
+    <script type="text/tpl" id="area-tpl">
+        {{ each result}}
+        <li><a href="./gsproduct.html?shopId={{ getQueryString("shopId")==""?0:getQueryString("shopId") }}&areaId={{ $value.areaId }}">{{ $value.areaName }}</a></li>
+        {{ /each }}
+    </script>
+    <!--价格-->
+    <script type="text/tpl" id="price-tpl">
+        {{ each result}}
+        <li><a href="javascript:;">{{ $value.price }}</a></li>
+        {{ /each }}
+    </script>
+    <!--商品-->
+    <script type="text/tpl" id="gsproduct-tpl">
+        {{ each result }}
+        <li class="clearfix">
+            <a href="#">
+                <div class="pic">
+                    <img class="lazy" data-original="{{ $value.productImg }}"   alt="">
+                </div>
+                <div class="commodity-title">{{ $value.productName }}</div>
+                <p class="commodity-cost"><i>￥</i>{{ get$($value.productPrice) }}</p>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+
+
+
+    <?php include('../common/Bscript.html')  ?>
+</body>
+</html>

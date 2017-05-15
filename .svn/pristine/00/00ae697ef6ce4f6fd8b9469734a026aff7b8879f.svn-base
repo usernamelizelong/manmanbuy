@@ -1,0 +1,8 @@
+<!-- 搜索框部分-->
+<div class="mm_search">
+    <form action="">
+        <input type="search" placeholder="请输入你想比价的商品"/>
+        <!--按钮-->
+        <input type="button" value="搜索"/>
+    </form>
+</div>

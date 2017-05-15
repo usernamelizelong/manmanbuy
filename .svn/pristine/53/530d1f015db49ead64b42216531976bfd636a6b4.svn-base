@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <?php include('../common/Bstyle.html')?>
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    <div class="back f_left">
+        <a href="#" class='icon-back'></a>
+    </div>
+    <h1>海淘折扣</h1>
+    <div class="home">
+        <a href="#" onclick="trackEvent('header部下载');" class="icon-app"></a>
+    </div>
+</div>
+<!--商品列表-->
+<section class="seaAmoy-box">
+    <ul class="box-list clearfix" id="getmoneyctrl">
+        <!--商品列表的坑-->
+    </ul>
+    <div class="paging clearfix" id="getmoneyctrl-paging">
+        <!--<ul>-->
+            <!--<li><a href="">上一页</a></li>-->
+            <!--<li>-->
+                <!--<select name="paging" id="paging" onchange="window.location=this.value">-->
+                <!--<option value="1"></option>-->
+                <!--<option value="2">1</option>-->
+                <!--<option value="3">1</option>-->
+                <!--<option value="4">11</option>-->
+                <!--<option value="5">1</option>-->
+                <!--<option value="1">1</option>-->
+                <!--<option value="1">1</option>-->
+                <!--<option value="1">1</option>-->
+            <!--</select>-->
+            <!--</li>-->
+            <!--<li><a href="">下一页</a></li>-->
+        <!--</ul>-->
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!--模版-->
+<script type="text/tpl" id="getmoneyctrl-tpl">
+        {{ each result }}
+        <li class="clearfix">
+            <a href="#">
+                <div class="img">
+                {{ #$value.productImgSm }}
+                </div>
+                <div class="product">
+                    {{ $value.productName }}
+                    <span class="price">{{ $value.productPinkage }}</span>
+                </div>
+                <span class="source">{{ $value.productFrom }}</span>
+                <span class="comment"><i></i>{{ getAmount($value.productComCount) }}</span>
+            </a>
+        </li>
+        {{ /each }}
+</script>
+<script type="text/tpl" id="getmoneyctrl-paging-tpl">
+    <ul>
+    <li><a href="?pageid={{  }}">上一页</a></li>
+        <li>
+        <select name="paging" id="paging">
+            {{ each result }}
+        <option value="{{ $value.pagesize }}">{{ $index+1 }}</option>
+            {{ /each }}
+        </select>
+        </li>
+        <li><a href="?pageid=2">下一页</a></li>
+        </ul>
+</script>
+
+
+
+
+<!--底部-->
+<?php include('../common/foot.html')?>
+<!--引入脚本-->
+<?php include('../common/Bscript.html')  ?>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+
+
+.discount{
+  width: 100%;
+  height: 100%;
+
+  >.discount-header{
+    position: relative;
+    width: 100%;
+    height: 44px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: #ff841d;
+    >.discount-back,.discount-menu{
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 44px;
+
+
+    }
+    >.discount-back{
+      left: 15px;
+      color:white;
+      top: 10px;
+    }
+    >.discount-menu{
+      display: block;
+      width: 50px;
+      height: 44px;
+      right: 8px;
+      //border:1px solid #ff841d;
+      background-image: url("../../imgs/home/header_app.png");
+      background-repeat: no-repeat;
+      background-size: 40px 35px;
+      top: 5px;
+
+
+    }
+    >h1{
+      line-height: 44px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color:white;
+      font-family: Microsoft YaHei;
+    }
+  }
+  >.container{
+    height: 100%;
+    box-sizing: border-box;
+    >.row{
+      height: 100%;
+      padding: 0;
+      >.border-img{
+        height: 320px;
+        border: 1px solid #eee;
+        box-sizing: border-box;
+        >.pro{
+          width: 100%;
+          display: block;
+          font-family: Microsoft YaHei;
+          >.img{
+            width: 100%;
+            //text-align: center;
+            >img{
+              width: 140px;
+              height: 140px;
+              margin: 0 auto 20px;
+            }
+
+          }
+          >.productName{
+            height: 36px;
+            line-height: 18px;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: Microsoft YaHei;
+            color:#333;
+          }
+          >.productPrice{
+            margin-top: 66px;
+            color:red;
+          }
+          >.productFrom,.productTime{
+            color:#a1a1a1;
+            font-size: 12px;
+            float: left;
+
+
+          }
+        }
+      }
+    }
+  }
+  .download_tab{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 0;
+    bottom: 10px;
+    > a{
+      width: 100%;
+      height: 100%;
+      display: block;
+      > img{
+        width: 70px;
+        height: 70px;
+
+      }
+    }
+  }
+}

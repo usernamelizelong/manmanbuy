@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css"/>
+    <!--引用公共的样式-->
+    <link rel="stylesheet" href="../../css/money/base.css">
+    <!--引用自己的样式-->
+    <link rel="stylesheet" href="../../css/money/money.css">
+    <!-- 底部css样式 -->
+    <link rel="stylesheet" href="../../css/money/font.css">
+    <!--<link rel="stylesheet" href="../../css/common/foot.css">-->
+    <title>海淘折扣</title>
+    <?php include('../common/Bstyle.html')?>
+
+</head>
+<body>
+<!-- 顶部 -->
+<div class="top_header w row">
+    <div class="back">
+        <a href="" class="icon-back">
+        </a>
+    </div>
+    <h2>海淘折扣</h2>
+    <div>
+        <a href="" class="icon-app"></a>
+    </div>
+</div>
+<!-- 商品显示部分 -->
+<div class="list w container">
+    <ul class=" row" >
+        <!-- 插入模板 -->
+    </ul>
+</div>
+<div class="page">
+    <table class="w">
+        <tbody>
+        <tr>
+            <td class="btnL" ><button id="btnL">上一页</button></td>
+            <td class="sel" ><select id="page" style="color:black">
+
+            </select></td>
+            <td class="btnR "><button id="btnR">下一页</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+    <!--<div class="">
+        <?php include('../common/foot.html')?>
+    </div>-->
+    <!--底部登录与注册-->
+    <!--<div id="foot">
+        <div class="foot_top">
+            <a href="#">登录</a> <a href="#">注册</a>
+            <a href="javascript:void(0);" id="header01" style="width: 40%; border: 0;">
+                <img src="../../images/common/top.jpg" width="15" height="15"/>返回顶部</a>
+        </div>
+        <div class="footer">
+            <p>
+                <a href="" style="color: Red;">手机APP下载</a> <a href="#">
+                慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>-->
+
+
+
+    <!-- 商品模板 -->
+    <script type="text/html" id="mentTpl">
+    {{ each result}}
+            <li>
+                <a>
+                    <div class="pic">
+                        <!-- 放图片 -->
+                        {{ #$value.productImgSm }}
+                    </div>
+                    <div class="content">
+                        <div class="title">
+                            <span class="tit">{{ $value.productName }}</span>
+                            <span class="description"> {{ $value.productPinkage }}</span>
+                        </div>
+                        <div class="form">
+                            <span class="mail">{{ $value.productFrom }} | {{ $value.productTime }}</span>
+                            <span><i class="icon-comment iconfont fr">&#xe612;<i class="number"> {{ $value.productComCount }}</i></i></span>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </a>
+            </li>
+    {{ /each }}
+    </script>
+
+
+    <!--引用jq-->
+    <!--<script src="../../lib/jquery/jquery.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>-->
+
+    <!--引用template-->
+    <!--<script src="../../lib/artTemplate-3.0.1/template.js"></script>-->
+
+    <!--引用自己的js-->
+    <!--<script src="../../js/money/money.js"></script>
+    <script src="../../js/common/util.js"></script>
+    <script src="../../js/common/common.js"></script>
+    <script src="../../js/common/main.js"></script>-->
+
+    <?php include('../common/script.html')?>
+</body>
+</html>
